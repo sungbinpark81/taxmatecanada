@@ -1057,59 +1057,26 @@ function submitModal(e) {
   });
 }
 
-function subscribeMailchimp({ email, name, role }, callback) {
-  // 이름 분리
+async function subscribeMailchimp({ email, name, role }, callback) {
   const parts = name.trim().split(' ');
   const fname = parts[0] || '';
   const lname = parts.slice(1).join(' ') || '';
 
-  // Mailchimp hidden iframe POST 방식 (CORS 우회)
-  const postUrl = `https://gmail.us12.list-manage.com/subscribe/post?u=${MC.u}&id=${MC.id}`;
-
-  const form = document.createElement('form');
-  form.method  = 'POST';
-  form.action  = postUrl;
-  form.target  = '_mc_iframe';
-  form.style.display = 'none';
-
-  const fields = { EMAIL: email, FNAME: fname, LNAME: lname, b_: '' };
-  for (const [key, val] of Object.entries(fields)) {
-    const input = document.createElement('input');
-    input.type  = 'hidden';
-    input.name  = key;
-    input.value = val;
-    form.appendChild(input);
+  try {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, fname, lname, role }),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      callback('success', data.alreadySubscribed ? 'already subscribed' : '');
+    } else {
+      callback('error', data.error || 'Something went wrong.');
+    }
+  } catch {
+    callback('error', 'Network error. Please try again.');
   }
-
-  // 숨겨진 iframe (Mailchimp 응답 페이지 수신용)
-  let iframe = document.getElementById('_mc_iframe');
-  if (!iframe) {
-    iframe = document.createElement('iframe');
-    iframe.name  = '_mc_iframe';
-    iframe.id    = '_mc_iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-  }
-
-  // iframe 로드 완료 시 성공 처리
-  const onLoad = () => {
-    iframe.removeEventListener('load', onLoad);
-    clearTimeout(timer);
-    callback('success', '');
-    document.body.removeChild(form);
-  };
-
-  // 타임아웃 8초
-  const timer = setTimeout(() => {
-    iframe.removeEventListener('load', onLoad);
-    // 타임아웃 발생해도 Mailchimp는 이미 데이터를 받았을 가능성 높음 → 성공 처리
-    callback('success', '');
-    if (document.body.contains(form)) document.body.removeChild(form);
-  }, 8000);
-
-  iframe.addEventListener('load', onLoad);
-  document.body.appendChild(form);
-  form.submit();
 }
 
 function showErr(id) { document.getElementById('err-'+id).classList.remove('hidden'); }
