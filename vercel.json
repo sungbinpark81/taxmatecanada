@@ -1,7 +1,6 @@
 {
-  "functions": {
-    "api/subscribe.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
 }
