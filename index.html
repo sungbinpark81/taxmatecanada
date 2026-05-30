@@ -8,169 +8,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "tertiary": "#1c0500", "on-primary-fixed": "#001a42",
-          "secondary-container": "#e51929", "on-tertiary": "#ffffff",
-          "error": "#ba1a1a", "on-error-container": "#93000a",
-          "border-subtle": "#E2E8F0", "surface-tint": "#465e8f",
-          "tertiary-fixed": "#ffdbcd", "on-error": "#ffffff",
-          "on-surface-variant": "#44474f", "surface-variant": "#e0e3e5",
-          "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133",
-          "on-secondary-fixed": "#410004", "primary": "#000a23",
-          "secondary": "#bb001a", "surface-container-highest": "#e0e3e5",
-          "background": "#020617", "on-background": "#f8fafc",
-          "surface-bright": "#1e293b", "slate-surface": "#0f172a",
-          "inverse-on-surface": "#eff1f3", "surface-container-low": "#1e293b",
-          "secondary-fixed": "#ffdad7", "on-secondary-fixed-variant": "#930012",
-          "on-tertiary-container": "#c07758", "error-container": "#ffdad6",
-          "outline": "#475569", "on-primary-container": "#7189bc",
-          "on-secondary": "#ffffff", "on-secondary-container": "#fffbff",
-          "tertiary-fixed-dim": "#ffb597", "surface": "#020617",
-          "on-primary": "#ffffff", "tertiary-container": "#411300",
-          "midnight-navy": "#00204E", "primary-fixed-dim": "#aec6fe",
-          "on-tertiary-fixed": "#360f00", "surface-container-lowest": "#020617",
-          "on-primary-fixed-variant": "#2e4675", "primary-container": "#00204e",
-          "surface-dim": "#d8dadc", "primary-fixed": "#d8e2ff",
-          "leaf-red": "#D80621", "hazard-green": "#22c55e",
-          "inverse-primary": "#aec6fe", "surface-container": "#1e293b",
-          "outline-variant": "#334155", "on-surface": "#f8fafc",
-          "secondary-fixed-dim": "#ffb3ad", "on-tertiary-fixed-variant": "#70371d"
-        },
-        borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
-        spacing: {
-          "margin-mobile": "16px", "container-max": "1440px",
-          "margin-desktop": "60px", "base": "8px", "gutter": "32px"
-        },
-        fontFamily: {
-          "headline-lg": ["Public Sans"], "label-sm": ["Inter"],
-          "headline-lg-mobile": ["Public Sans"], "body-lg": ["Inter"],
-          "label-md": ["Inter"], "display-lg": ["Public Sans"],
-          "body-md": ["Inter"], "headline-md": ["Public Sans"]
-        },
-        fontSize: {
-          "headline-lg": ["48px", {"lineHeight":"1","letterSpacing":"-0.05em","fontWeight":"900"}],
-          "label-sm": ["12px", {"lineHeight":"16px","fontWeight":"600"}],
-          "headline-lg-mobile": ["32px", {"lineHeight":"1","fontWeight":"800"}],
-          "body-lg": ["20px", {"lineHeight":"30px","fontWeight":"400"}],
-          "label-md": ["14px", {"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"700"}],
-          "display-lg": ["120px", {"lineHeight":"0.9","letterSpacing":"-0.08em","fontWeight":"900"}],
-          "body-md": ["16px", {"lineHeight":"24px","fontWeight":"400"}],
-          "headline-md": ["28px", {"lineHeight":"32px","fontWeight":"700"}]
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#1c0500","on-primary-fixed": "#001a42","secondary-container": "#e51929","on-tertiary": "#ffffff","error": "#ba1a1a","on-error-container": "#93000a","border-subtle": "#E2E8F0","surface-tint": "#465e8f","tertiary-fixed": "#ffdbcd","on-error": "#ffffff","on-surface-variant": "#44474f","surface-variant": "#e0e3e5","surface-container-high": "#e6e8ea","inverse-surface": "#2d3133","on-secondary-fixed": "#410004","primary": "#000a23","secondary": "#bb001a","surface-container-highest": "#e0e3e5","background": "#020617","on-background": "#f8fafc","surface-bright": "#1e293b","slate-surface": "#0f172a","inverse-on-surface": "#eff1f3","surface-container-low": "#1e293b","secondary-fixed": "#ffdad7","on-secondary-fixed-variant": "#930012","on-tertiary-container": "#c07758","error-container": "#ffdad6","outline": "#475569","on-primary-container": "#7189bc","on-secondary": "#ffffff","on-secondary-container": "#fffbff","tertiary-fixed-dim": "#ffb597","surface": "#020617","on-primary": "#ffffff","tertiary-container": "#411300","midnight-navy": "#00204E","primary-fixed-dim": "#aec6fe","on-tertiary-fixed": "#360f00","surface-container-lowest": "#020617","on-primary-fixed-variant": "#2e4675","primary-container": "#00204e","surface-dim": "#d8dadc","primary-fixed": "#d8e2ff","leaf-red": "#D80621","hazard-green": "#22c55e","inverse-primary": "#aec6fe","surface-container": "#1e293b","outline-variant": "#334155","on-surface": "#f8fafc","secondary-fixed-dim": "#ffb3ad","on-tertiary-fixed-variant": "#70371d"
+                    },
+                    "borderRadius": {"DEFAULT": "0px","lg": "0px","xl": "0px","full": "9999px"},
+                    "spacing": {"margin-mobile": "16px","container-max": "1440px","margin-desktop": "60px","base": "8px","gutter": "32px"},
+                    "fontFamily": {"headline-lg": ["Public Sans"],"label-sm": ["Inter"],"headline-lg-mobile": ["Public Sans"],"body-lg": ["Inter"],"label-md": ["Inter"],"display-lg": ["Public Sans"],"body-md": ["Inter"],"headline-md": ["Public Sans"]},
+                    "fontSize": {"headline-lg": ["48px", {"lineHeight": "1","letterSpacing": "-0.05em","fontWeight": "900"}],"label-sm": ["12px", {"lineHeight": "16px","fontWeight": "600"}],"headline-lg-mobile": ["32px", {"lineHeight": "1","fontWeight": "800"}],"body-lg": ["20px", {"lineHeight": "30px","fontWeight": "400"}],"label-md": ["14px", {"lineHeight": "20px","letterSpacing": "0.05em","fontWeight": "700"}],"display-lg": ["120px", {"lineHeight": "0.9","letterSpacing": "-0.08em","fontWeight": "900"}],"body-md": ["16px", {"lineHeight": "24px","fontWeight": "400"}],"headline-md": ["28px", {"lineHeight": "32px","fontWeight": "700"}]}
+                },
+            },
         }
-      }
-    }
-  }
 </script>
 <style>
-  /* ── Base ── */
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
-    vertical-align: middle;
-  }
-  .glass-panel {
-    background: rgba(15,23,42,0.6);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; vertical-align: middle; }
+  .glass-panel { background: rgba(15,23,42,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
   .hazard-glow { text-shadow: 0 0 10px rgba(34,197,94,0.5); }
   .brutalist-border { border: 4px solid #000; box-shadow: 8px 8px 0px #22c55e; }
-
-  /* ── Scanline ── */
-  .scanline {
-    width:100%; height:100px; z-index:99;
-    background: linear-gradient(0deg,rgba(0,0,0,0) 0%,rgba(34,197,94,0.05) 50%,rgba(0,0,0,0) 100%);
-    opacity:0.1; position:fixed; bottom:100%; pointer-events:none;
-    animation: scanline 8s linear infinite;
-  }
+  .scanline { width:100%; height:100px; z-index:99; background: linear-gradient(0deg,rgba(0,0,0,0) 0%,rgba(34,197,94,0.05) 50%,rgba(0,0,0,0) 100%); opacity:0.1; position:fixed; bottom:100%; pointer-events:none; animation: scanline 8s linear infinite; }
   @keyframes scanline { 0%{bottom:100%} 100%{bottom:-100px} }
-
-  /* ── Mobile menu ── */
-  #mobile-menu {
-    display:none; position:fixed; top:80px; left:0; right:0; z-index:48;
-    background:#020617; border-bottom:3px solid #22c55e;
-    padding:24px 24px 32px;
-  }
-  #mobile-menu.open { display:block; }
-
-  /* ── Modal ── */
-  #modal-overlay {
-    position:fixed; inset:0; z-index:200;
-    background:rgba(2,6,23,0.88); backdrop-filter:blur(8px);
-    display:flex; align-items:center; justify-content:center;
-    opacity:0; pointer-events:none;
-    transition:opacity .25s ease;
-  }
+  /* Modal */
+  #modal-overlay { position:fixed; inset:0; z-index:200; background:rgba(2,6,23,0.88); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .25s ease; }
   #modal-overlay.active { opacity:1; pointer-events:all; }
-  #modal-box {
-    background:#0f172a; max-width:480px; width:90%; padding:44px;
-    border:4px solid #22c55e; box-shadow:12px 12px 0 #22c55e;
-    transform:translateY(20px); transition:transform .25s ease;
-  }
+  #modal-box { background:#0f172a; max-width:480px; width:90%; padding:44px; border:4px solid #22c55e; box-shadow:12px 12px 0 #22c55e; transform:translateY(20px); transition:transform .25s ease; }
   #modal-overlay.active #modal-box { transform:translateY(0); }
-
-  /* ── Toast ── */
-  #toast {
-    position:fixed; bottom:32px; right:32px; z-index:300;
-    background:#22c55e; color:#020617;
-    padding:14px 24px; font-weight:700; font-size:13px;
-    letter-spacing:.06em; text-transform:uppercase;
-    box-shadow:5px 5px 0 #000;
-    transform:translateY(80px); opacity:0;
-    transition:all .3s ease;
-  }
+  /* Toast */
+  #toast { position:fixed; bottom:32px; right:32px; z-index:300; background:#22c55e; color:#020617; padding:14px 24px; font-weight:700; font-size:13px; letter-spacing:.06em; text-transform:uppercase; box-shadow:5px 5px 0 #000; transform:translateY(80px); opacity:0; transition:all .3s ease; }
   #toast.show { transform:translateY(0); opacity:1; }
-
-  /* ── Scroll reveal ── */
-  .reveal { opacity:0; transform:translateY(36px); transition:opacity .65s ease,transform .65s ease; }
-  .reveal.visible { opacity:1; transform:translateY(0); }
-
-  /* ── Terminal cursor ── */
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-  .cursor {
-    display:inline-block; width:9px; height:1.1em;
-    background:#22c55e; vertical-align:text-bottom;
-    animation:blink 1s infinite;
-  }
-
-  /* ── Nav active ── */
-  nav.scrolled { background:rgba(2,6,23,.97) !important; }
-
-  /* ── Income btn active ── */
-  .income-btn.active {
-    border-color:#22c55e !important; color:#22c55e !important;
-  }
-
-  /* ── Chat messages scroll ── */
-  #chat-messages { max-height:260px; overflow-y:auto; }
+  /* Chat scroll */
+  #chat-messages { max-height:220px; overflow-y:auto; }
   #chat-messages::-webkit-scrollbar { width:4px; }
-  #chat-messages::-webkit-scrollbar-track { background:transparent; }
   #chat-messages::-webkit-scrollbar-thumb { background:#22c55e44; }
-
-  /* ── Progress bar fill anim ── */
-  @keyframes fillBar { from{width:0} to{width:var(--target-w)} }
-
-  /* ── Responsive display-lg ── */
-  @media(max-width:768px){
-    .font-display-lg { font-size:44px !important; line-height:1 !important; letter-spacing:-0.04em !important; }
-    .px-margin-desktop { padding-left:20px !important; padding-right:20px !important; }
-  }
-  @media(max-width:480px){
-    .font-display-lg { font-size:32px !important; }
-  }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md selection:bg-hazard-green selection:text-surface overflow-x-hidden">
 
-<!-- Scanline FX -->
 <div class="scanline"></div>
 
-<!-- ══════════════════════════════════════════
-     MODAL
-══════════════════════════════════════════ -->
+<!-- MODAL -->
 <div id="modal-overlay">
   <div id="modal-box">
     <div class="flex justify-between items-start mb-6">
@@ -185,14 +63,12 @@
       <div class="space-y-4">
         <div>
           <label class="text-label-sm text-hazard-green uppercase tracking-widest block mb-2">Full Name</label>
-          <input id="f-name" type="text" required placeholder="Jane Smith"
-            class="w-full bg-black border-2 border-outline-variant p-3 text-on-surface placeholder:text-outline focus:border-hazard-green outline-none font-mono text-sm">
+          <input id="f-name" type="text" required placeholder="Jane Smith" class="w-full bg-black border-2 border-outline-variant p-3 text-on-surface placeholder:text-outline focus:border-hazard-green outline-none font-mono text-sm">
           <p class="text-red-400 text-xs mt-1 hidden" id="err-name">Name is required.</p>
         </div>
         <div>
           <label class="text-label-sm text-hazard-green uppercase tracking-widest block mb-2">Email Address</label>
-          <input id="f-email" type="email" required placeholder="jane@example.ca"
-            class="w-full bg-black border-2 border-outline-variant p-3 text-on-surface placeholder:text-outline focus:border-hazard-green outline-none font-mono text-sm">
+          <input id="f-email" type="email" required placeholder="jane@example.ca" class="w-full bg-black border-2 border-outline-variant p-3 text-on-surface placeholder:text-outline focus:border-hazard-green outline-none font-mono text-sm">
           <p class="text-red-400 text-xs mt-1 hidden" id="err-email">Valid email required.</p>
         </div>
         <div>
@@ -205,8 +81,7 @@
           </select>
         </div>
       </div>
-      <button type="submit" id="modal-cta"
-        class="w-full mt-7 py-4 bg-hazard-green text-surface font-black uppercase tracking-tighter hover:brightness-110 transition-all shadow-[4px_4px_0_#fff] flex items-center justify-center gap-2">
+      <button type="submit" id="modal-cta" class="w-full mt-7 py-4 bg-hazard-green text-surface font-black uppercase tracking-tighter hover:brightness-110 transition-all shadow-[4px_4px_0_#fff]">
         <span id="modal-btn-text">Claim My Spot →</span>
       </button>
     </form>
@@ -214,750 +89,193 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     TOAST
-══════════════════════════════════════════ -->
+<!-- TOAST -->
 <div id="toast">✓ You're on the list! Check your inbox.</div>
 
-<!-- ══════════════════════════════════════════
-     NAVIGATION
-══════════════════════════════════════════ -->
-<nav id="navbar" class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 h-20 transition-colors duration-300">
-  <div class="flex justify-between items-center px-5 md:px-margin-desktop h-full max-w-container-max mx-auto">
-    <!-- Logo -->
-    <a href="#hero">
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybAgvz0MJEi0V2vfpdlUkhIMu2oE-kwKDoa1jrLY5LQ9fmb8d3oafjDrpvMAWkJj7pyV-H4cWpWE3pIRrqKwH7pnGnabOgPook_T8Z9SjLLueGTeZhe9qsi-olzt7lz57jF4p40y15lvCpF1CnhazUW2opNzV11cVOMxLGW7gxMAgjyB6M1OWP60pn7ezqwjFXt2ws9he4aQbEmrWSgoMg9W6XYGapPPY2o6UMzVtBmWUXCWxNeWEn6u-CFZPPx9U-_IDRNXpHmwm"
-        alt="TaxMate Canada Logo" class="h-10 w-auto">
-    </a>
-    <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-gutter">
-      <a href="#features" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-section="features">Features</a>
-      <a href="#pricing"  class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-section="pricing">Pricing</a>
-      <a href="#faq"      class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-section="faq">FAQ</a>
-      <button onclick="openModal('founder')"
-        class="bg-hazard-green text-surface px-6 py-2 font-bold hover:translate-x-1 hover:-translate-y-1 transition-transform shadow-[4px_4px_0_#fff]">
-        Join Early Access
-      </button>
-    </div>
-    <!-- Hamburger -->
-    <button id="hamburger" onclick="toggleMenu()" class="md:hidden text-on-surface p-1" aria-label="Menu">
-      <span class="material-symbols-outlined text-3xl" id="ham-icon">menu</span>
-    </button>
-  </div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img alt="TaxMate Canada Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybAgvz0MJEi0V2vfpdlUkhIMu2oE-kwKDoa1jrLY5LQ9fmb8d3oafjDrpvMAWkJj7pyV-H4cWpWE3pIRrqKwH7pnGnabOgPook_T8Z9SjLLueGTeZhe9qsi-olzt7lz57jF4p40y15lvCpF1CnhazUW2opNzV11cVOMxLGW7gxMAgjyB6M1OWP60pn7ezqwjFXt2ws9he4aQbEmrWSgoMg9W6XYGapPPY2o6UMzVtBmWUXCWxNeWEn6u-CFZPPx9U-_IDRNXpHmwm">
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-hazard-green border-b-2 border-hazard-green pb-1" href="#features">Features</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#pricing">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a>
+<button onclick="openModal('founder')" class="bg-hazard-green text-surface px-6 py-2 font-bold hover:translate-x-1 hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_#fff]">
+  Join Early Access
+</button>
+</div>
+</div>
 </nav>
 
-<!-- Mobile menu -->
-<div id="mobile-menu">
-  <div class="flex flex-col gap-5">
-    <a href="#features" onclick="closeMenu()" class="font-label-md text-label-md text-on-surface-variant hover:text-hazard-green transition-colors">Features</a>
-    <a href="#pricing"  onclick="closeMenu()" class="font-label-md text-label-md text-on-surface-variant hover:text-hazard-green transition-colors">Pricing</a>
-    <a href="#faq"      onclick="closeMenu()" class="font-label-md text-label-md text-on-surface-variant hover:text-hazard-green transition-colors">FAQ</a>
-    <button onclick="openModal('founder');closeMenu();"
-      class="w-full bg-hazard-green text-surface py-3 font-bold uppercase tracking-tighter shadow-[4px_4px_0_#fff]">
-      Join Early Access
-    </button>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<h1 class="font-display-lg uppercase mb-8 leading-none text-7xl lg:text-8xl tracking-tightest" style="line-height: 0.95; letter-spacing: -0.05em;">THE&nbsp; TAX TOOL BUILT FOR <br><span class="text-hazard-green">CANADIAN FREELANCERS</span></h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-7">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-4 border-hazard-green pl-6">
+  The Canadian tax system is a complex maze. TaxMate Canada is the heavy-duty data terminal designed to navigate it with surgical efficiency. No fluff. Just precision.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+  <button onclick="openModal('founder')" class="bg-hazard-green text-surface px-8 py-4 font-black uppercase tracking-tighter hover:brightness-110 transition-all shadow-[6px_6px_0_#fff] text-lg">
+    Claim Founder Spot — $9/mo →
+  </button>
+</div>
+</div>
+<div class="md:col-span-5 flex justify-end">
+<div class="glass-panel p-8 brutalist-border w-full max-w-md" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;"><img alt="Secure Connection Status Visualization" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoTrM414OwuKU7K1KsQd_0CxJ92fVGvWkIF8zrYvSaayKJa2jcKAL6a1PDEAiDebCDry8D7fb2WEoS6A6HCKwGsa3QUrzgvB5tGfJWe9jcysmhVzI7_Bu4vjwis2vxRIDgHIwLqLdgdrnUWxgc9MKCz_0L74ctDPglc3PRuC3vd6wpMOXoCTyqYiLGThqe0EfLB3qv9bxv9RJQUGR5JLC8IrsHsyuFAofu4X6bOJ-V3PHuI6ZKMp05sbjZ7ai1MhBC_1wyOnQue8Qz" style="min-height: 200px;"></div>
+</div>
+</div>
+</section>
+
+<!-- Bento Terminal Dashboard Display -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="features">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Monthly Tax Card -->
+<div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black relative overflow-hidden group" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
+<div class="absolute top-0 left-0 w-full h-1 bg-hazard-green scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+<h3 class="font-headline-md text-headline-md mb-8 flex items-center gap-3"><span class="material-symbols-outlined text-hazard-green">analytics</span>MONTHLY ESTIMATE</h3>
+<div class="flex justify-center mb-8">
+<div class="relative w-48 h-48 rounded-full border-[12px] border-surface-variant flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full -rotate-90"><circle class="stroke-hazard-green fill-none" cx="50%" cy="50%" r="88" stroke-dasharray="553" stroke-dashoffset="138" stroke-width="12"></circle></svg>
+<div class="text-center"><span class="block font-headline-lg text-headline-lg">$3,450</span><span class="text-label-sm text-on-surface-variant uppercase tracking-tighter">Estimated Tax</span></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface/50 border border-outline-variant/30"><span class="block text-label-sm text-on-surface-variant">FEDERAL</span><span class="font-bold text-lg">$1,900</span></div>
+<div class="p-4 bg-surface/50 border border-outline-variant/30"><span class="block text-label-sm text-on-surface-variant">PROVINCIAL</span><span class="font-bold text-lg">$1,550</span></div>
+</div>
+</div>
+<!-- GST Radar Card -->
+<div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black relative" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
+<h3 class="font-headline-md text-headline-md mb-8 flex items-center gap-3"><span class="material-symbols-outlined text-hazard-green">radar</span>GST/HST RADAR</h3>
+<div class="aspect-square w-full border border-outline-variant/20 rounded-full flex items-center justify-center relative mb-8">
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-75"></div>
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-50"></div>
+<div class="w-2 h-2 bg-hazard-green rounded-full shadow-[0_0_15px_#22c55e]"></div>
+<div class="absolute w-1/2 h-0.5 bg-hazard-green/30 origin-left rotate-45 animate-[spin_4s_linear_infinite]"></div>
+</div>
+<div class="space-y-4">
+<div class="h-4 bg-surface-variant w-full relative overflow-hidden"><div class="absolute top-0 left-0 h-full bg-hazard-green" style="width: 62%"></div></div>
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md">CURRENT SALES</span>
+<div class="text-right"><span class="block font-headline-md text-headline-md">$18,500</span><span class="text-label-sm text-on-surface-variant">OF $30,000 THRESHOLD</span></div>
+</div>
+</div>
+</div>
+<!-- AI Chat Card -->
+<div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black flex flex-col" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
+<h3 class="font-headline-md text-headline-md mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-hazard-green">robot_2</span>AI ASSISTANT</h3>
+<div class="flex-grow mb-4">
+  <div id="chat-messages" class="space-y-3 mb-3">
+    <div class="p-4 bg-surface/50 border border-outline-variant/30"><span class="text-label-sm text-hazard-green uppercase block mb-1">User Inquiry</span><p class="text-body-md">Can I deduct my home office expenses for my side hustle?</p></div>
+    <div class="p-4 bg-hazard-green/10 border border-hazard-green/30 italic"><span class="text-label-sm text-hazard-green uppercase block mb-1">AI Output</span><p class="text-body-md">Processing income-to-space ratio... Yes, according to CRA T2125 guidelines, you can deduct a prorated portion of rent and utilities.</p></div>
+  </div>
+  <div class="flex flex-wrap gap-2 mb-3">
+    <button onclick="quickAsk('GST threshold?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">GST threshold?</button>
+    <button onclick="quickAsk('RRSP deductions?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">RRSP deductions?</button>
+    <button onclick="quickAsk('Filing deadline?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">Filing deadline?</button>
   </div>
 </div>
+<div class="relative">
+<input id="chat-input" class="w-full bg-black border-2 border-outline-variant p-4 text-hazard-green placeholder:text-outline focus:border-hazard-green outline-none font-mono" placeholder="QUERY SYSTEM..." type="text" onkeydown="if(event.key==='Enter')sendChat()">
+<button onclick="sendChat()" class="absolute right-4 top-1/2 -translate-y-1/2 text-hazard-green"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+</section>
 
-<!-- ══════════════════════════════════════════
-     MAIN
-══════════════════════════════════════════ -->
-<main class="pt-32 pb-24">
+<!-- Feature Grid -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-panel p-8 brutalist-border relative group hover:bg-hazard-green/5 transition-all" style="box-shadow: 8px 8px 0px #22c55e;"><span class="material-symbols-outlined text-hazard-green text-4xl mb-6 block">precision_manufacturing</span><h2 class="font-headline-md text-headline-md uppercase mb-4">Professional <br>Precision</h2><p class="text-on-surface-variant font-body-md">Engineered for surgical accuracy. We handle complex Canadian tax logic with terminal-grade reliability to ensure your records are flawless.</p></div>
+<div class="glass-panel p-8 brutalist-border relative group hover:bg-hazard-green/5 transition-all" style="box-shadow: 8px 8px 0px #22c55e;"><span class="material-symbols-outlined text-hazard-green text-4xl mb-6 block">bolt</span><h2 class="font-headline-md text-headline-md uppercase mb-4">Freelancer <br>Velocity</h2><p class="text-on-surface-variant font-body-md">Built for those who move fast. Minimize administrative overhead and reclaim your time with a workflow designed for the modern independent professional.</p></div>
+<div class="glass-panel p-8 brutalist-border relative group hover:bg-hazard-green/5 transition-all" style="box-shadow: 8px 8px 0px #22c55e;"><span class="material-symbols-outlined text-hazard-green text-4xl mb-6 block">map</span><h2 class="font-headline-md text-headline-md uppercase mb-4">CRA Native <br>Architecture</h2><p class="text-on-surface-variant font-body-md">Not a global port. TaxMate is built from the ground up specifically for the Canadian tax system, provincial nuances, and CRA compliance.</p></div>
+</div>
+</section>
 
-  <!-- ── Hero ────────────────────────────── -->
-  <section id="hero" class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-    <h1 class="font-display-lg text-display-lg uppercase mb-8 leading-none reveal">
-      FINANCIAL <span class="text-hazard-green hazard-glow">PRECISION</span><br>
-      THROUGH AI <span class="text-transparent bg-clip-text bg-gradient-to-r from-hazard-green to-white">DOMINANCE</span>
-    </h1>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
-      <div class="md:col-span-7 reveal" style="transition-delay:.1s">
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-4 border-hazard-green pl-6">
-          The Canadian tax system is a complex maze. TaxMate Canada is the heavy-duty data terminal designed to navigate it with surgical efficiency. No fluff. Just precision.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 mt-8">
-          <button onclick="openModal('founder')"
-            class="bg-hazard-green text-surface px-8 py-4 font-black uppercase tracking-tighter hover:brightness-110 transition-all shadow-[6px_6px_0_#fff] text-lg">
-            Claim Founder Spot — $9/mo →
-          </button>
-          <a href="#features"
-            class="border-2 border-outline-variant px-8 py-4 font-bold uppercase tracking-tighter hover:border-hazard-green hover:text-hazard-green transition-colors text-center">
-            See Features ↓
-          </a>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-4 uppercase tracking-wider font-mono">
-          <span class="text-hazard-green font-bold" id="spot-count">347</span> founders locked in ·
-          <span class="text-hazard-green font-bold">153</span> spots remaining
-        </p>
-      </div>
-      <div class="md:col-span-5 flex justify-end reveal" style="transition-delay:.2s">
-        <div class="glass-panel p-8 brutalist-border w-full max-w-md">
-          <div class="flex justify-between items-center mb-6">
-            <span class="font-label-md text-label-md text-hazard-green uppercase tracking-widest">System Status</span>
-            <span class="flex h-3 w-3 rounded-full bg-hazard-green animate-pulse"></span>
-          </div>
-          <div class="space-y-4">
-            <div class="flex justify-between font-mono text-sm">
-              <span class="text-on-surface-variant">AI CALCULATIONS/SEC</span>
-              <span class="text-on-surface" id="calc-counter">14,802</span>
-            </div>
-            <div class="flex justify-between font-mono text-sm">
-              <span class="text-on-surface-variant">TAX RULES SYNCED</span>
-              <span class="text-hazard-green font-bold">100% COMPLETE</span>
-            </div>
-            <div class="flex justify-between font-mono text-sm">
-              <span class="text-on-surface-variant">ACTIVE USERS</span>
-              <span class="text-on-surface" id="user-counter">1,247</span>
-            </div>
-            <div class="flex justify-between font-mono text-sm">
-              <span class="text-on-surface-variant">CRA API</span>
-              <span class="text-hazard-green">● ONLINE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Comparison Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<div class="glass-panel p-12 brutalist-border relative overflow-hidden" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
+<h2 class="font-display-lg text-display-lg uppercase mb-12 text-center">WHY <span class="text-hazard-green">TAXMATE?</span></h2>
+<div class="flex justify-center items-center bg-midnight-navy p-6 rounded-sm"><div class="w-full max-w-5xl overflow-x-auto">
+<table class="w-full border-collapse font-headline-md">
+<thead><tr class="border-b border-outline-variant/30">
+<th class="p-6 text-left"></th>
+<th class="p-6 bg-primary text-on-primary border-x border-hazard-green shadow-[0_0_15px_rgba(34,197,94,0.3)] min-w-[200px]"><div class="flex items-center justify-center gap-2"><span class="uppercase tracking-widest">TaxMate</span><span class="text-leaf-red">🍁</span></div></th>
+<th class="p-6 text-on-surface-variant font-medium min-w-[150px]">Wave</th>
+<th class="p-6 text-on-surface-variant font-medium min-w-[150px]">QuickBooks</th>
+</tr></thead>
+<tbody class="text-body-md">
+<tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">GST/HST $30K threshold tracking</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-3xl" style="color: rgb(245, 158, 11);">warning</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td></tr>
+<tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">Monthly tax estimator</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td></tr>
+<tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">Province-smart invoicing</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-3xl" style="color: rgb(245, 158, 11);">warning</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td></tr>
+<tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">AI tax Q&amp;A (CRA-based)</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td></tr>
+<tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">Built for Canadian freelancers</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td><td class="p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td></tr>
+<tr class="hover:bg-white/5 transition-colors"><td class="p-6 font-bold text-on-surface">Price</td><td class="p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="text-xl font-black text-hazard-green">$9/mo</span></td><td class="p-6 text-center font-bold text-on-surface">Free*</td><td class="p-6 text-center font-bold text-on-surface">$15+/mo</td></tr>
+</tbody>
+</table>
+<div class="mt-8 space-y-2 text-label-sm text-on-surface-variant font-mono uppercase">
+<p>*Wave's free plan does not include GST tracking, monthly tax estimates, or AI assistance.</p>
+<p>⚠ = Limited support. Wave supports basic GST invoicing but lacks threshold tracking, monthly estimates, and Canadian-specific AI guidance.</p>
+</div>
+</div></div>
+</div>
+</section>
 
-  <!-- ── Bento Dashboard ───────────────── -->
-  <section id="features" class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonials -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<h2 class="font-display-lg text-display-lg uppercase mb-12">HEAR FROM THE <span class="text-hazard-green">COMMUNITY</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-panel p-8 brutalist-border relative group"><span class="material-symbols-outlined text-hazard-green mb-4 block">format_quote</span><p class="font-body-lg text-on-surface mb-8">"This is incredibly helpful... thank you so much."</p><div class="flex items-center gap-4"><div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">VU</div><div><span class="block font-label-md text-hazard-green uppercase tracking-wider">Verified User</span><span class="block text-label-sm text-on-surface-variant uppercase">Freelancer</span></div></div></div>
+<div class="glass-panel p-8 brutalist-border relative group"><span class="material-symbols-outlined text-hazard-green mb-4 block">format_quote</span><p class="font-body-lg text-on-surface mb-8">"The automation for corporate bookkeeping and investment income is a massive gap that needs to be filled. Looking forward to the beta version!"</p><div class="flex items-center gap-4"><div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">TP</div><div><span class="block font-label-md text-hazard-green uppercase tracking-wider">Tax Professional</span><span class="block text-label-sm text-on-surface-variant uppercase">Corporate Specialist</span></div></div></div>
+<div class="glass-panel p-8 brutalist-border relative group"><span class="material-symbols-outlined text-hazard-green mb-4 block">format_quote</span><p class="font-body-lg text-on-surface mb-8">"Is this available for those earning less than $30k? Yes, and it's even more useful as you approach that threshold for tracking GST/HST."</p><div class="flex items-center gap-4"><div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">FL</div><div><span class="block font-label-md text-hazard-green uppercase tracking-wider">Freelancer</span><span class="block text-label-sm text-on-surface-variant uppercase">Solo Entrepreneur</span></div></div></div>
+<div class="glass-panel p-8 brutalist-border relative group"><span class="material-symbols-outlined text-hazard-green mb-4 block">format_quote</span><p class="font-body-lg text-on-surface mb-8">"As an accountant in London, Ontario, I'm really looking forward to the real-world feedback and implementation of this platform."</p><div class="flex items-center gap-4"><div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">AC</div><div><span class="block font-label-md text-hazard-green uppercase tracking-wider">Tax Professional</span><span class="block text-label-sm text-on-surface-variant uppercase">Public Accountant</span></div></div></div>
+</div>
+</section>
 
-      <!-- Monthly Tax Card -->
-      <div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black relative overflow-hidden group reveal">
-        <div class="absolute top-0 left-0 w-full h-1 bg-hazard-green scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-        <h3 class="font-headline-md text-headline-md mb-5 flex items-center gap-3">
-          <span class="material-symbols-outlined text-hazard-green">analytics</span>
-          MONTHLY ESTIMATE
-        </h3>
-        <!-- Income buttons -->
-        <div class="flex flex-wrap gap-2 mb-5">
-          <button onclick="setIncome(40000)" class="income-btn text-label-sm px-3 py-1 border border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors" data-v="40000">$40K</button>
-          <button onclick="setIncome(60000)" class="income-btn text-label-sm px-3 py-1 border border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors active" data-v="60000">$60K</button>
-          <button onclick="setIncome(80000)" class="income-btn text-label-sm px-3 py-1 border border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors" data-v="80000">$80K</button>
-          <button onclick="setIncome(100000)" class="income-btn text-label-sm px-3 py-1 border border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors" data-v="100000">$100K</button>
-        </div>
-        <div class="flex justify-center mb-6">
-          <div class="relative w-48 h-48 rounded-full border-[12px] border-surface-variant flex items-center justify-center">
-            <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 200 200">
-              <circle id="donut" class="stroke-hazard-green fill-none"
-                cx="100" cy="100" r="88" stroke-dasharray="553"
-                stroke-dashoffset="138" stroke-width="12"
-                style="transition:stroke-dashoffset .8s ease">
-              </circle>
-            </svg>
-            <div class="text-center">
-              <span class="block font-headline-lg text-headline-lg" id="tax-total">$3,450</span>
-              <span class="text-label-sm text-on-surface-variant uppercase tracking-tighter">Monthly Tax</span>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="p-4 bg-surface/50 border border-outline-variant/30">
-            <span class="block text-label-sm text-on-surface-variant">FEDERAL</span>
-            <span class="font-bold text-lg" id="tax-fed">$1,900</span>
-          </div>
-          <div class="p-4 bg-surface/50 border border-outline-variant/30">
-            <span class="block text-label-sm text-on-surface-variant">PROVINCIAL</span>
-            <span class="font-bold text-lg" id="tax-prov">$1,550</span>
-          </div>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-3 text-center font-mono">* Ontario rates · estimates only</p>
-      </div>
-
-      <!-- GST Radar Card -->
-      <div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black relative reveal" style="transition-delay:.05s">
-        <h3 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
-          <span class="material-symbols-outlined text-hazard-green">radar</span>
-          GST/HST RADAR
-        </h3>
-        <div id="radar-ring" class="aspect-square w-full border border-outline-variant/20 rounded-full flex items-center justify-center relative mb-6">
-          <div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-75"></div>
-          <div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-50"></div>
-          <div class="w-2 h-2 bg-hazard-green rounded-full shadow-[0_0_15px_#22c55e]"></div>
-          <div class="absolute w-1/2 h-0.5 bg-hazard-green/30 origin-left animate-[spin_4s_linear_infinite]"></div>
-          <!-- blip dots -->
-          <div class="absolute w-2 h-2 bg-hazard-green/70 rounded-full shadow-[0_0_8px_#22c55e]" style="top:28%;left:62%"></div>
-          <div class="absolute w-1.5 h-1.5 bg-hazard-green/50 rounded-full" style="top:58%;left:22%"></div>
-          <div class="absolute w-1 h-1 bg-hazard-green/40 rounded-full" style="top:72%;left:68%"></div>
-        </div>
-        <!-- Slider -->
-        <div class="mb-3">
-          <label class="text-label-sm text-hazard-green uppercase tracking-widest block mb-2">Drag to set annual sales</label>
-          <input type="range" id="gst-slider" min="0" max="35000" step="500" value="18500"
-            class="w-full accent-hazard-green cursor-pointer" oninput="updateGST(+this.value)">
-        </div>
-        <div class="space-y-3">
-          <div class="h-4 bg-surface-variant w-full relative overflow-hidden">
-            <div id="gst-bar" class="absolute top-0 left-0 h-full bg-hazard-green transition-all duration-500" style="width:62%"></div>
-          </div>
-          <div class="flex justify-between items-end">
-            <span class="font-label-md text-label-md">CURRENT SALES</span>
-            <div class="text-right">
-              <span class="block font-headline-md text-headline-md" id="gst-amount">$18,500</span>
-              <span class="text-label-sm text-on-surface-variant">OF $30,000 THRESHOLD</span>
-            </div>
-          </div>
-        </div>
-        <div id="gst-ok"   class="mt-4 p-3 border border-outline-variant/30 text-on-surface-variant text-label-sm font-bold uppercase font-mono">
-          ✓ Below threshold — keep tracking
-        </div>
-        <div id="gst-warn" class="hidden mt-4 p-3 border border-yellow-500 bg-yellow-500/10 text-yellow-400 text-label-sm font-bold uppercase font-mono">
-          ⚡ APPROACHING $30K — Prepare to register
-        </div>
-        <div id="gst-alert" class="hidden mt-4 p-3 border border-red-500 bg-red-500/10 text-red-400 text-label-sm font-bold uppercase font-mono">
-          ⚠ THRESHOLD EXCEEDED — Register for GST/HST now
-        </div>
-      </div>
-
-      <!-- AI Chat Card -->
-      <div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black flex flex-col reveal" style="transition-delay:.1s">
-        <h3 class="font-headline-md text-headline-md mb-5 flex items-center gap-3">
-          <span class="material-symbols-outlined text-hazard-green">robot_2</span>
-          AI ASSISTANT
-        </h3>
-        <div class="flex-grow mb-4">
-          <div id="chat-messages" class="space-y-3 mb-4">
-            <div class="p-4 bg-surface/50 border border-outline-variant/30">
-              <span class="text-label-sm text-hazard-green uppercase block mb-1">User Inquiry</span>
-              <p class="text-body-md">Can I deduct my home office expenses for my side hustle?</p>
-            </div>
-            <div class="p-4 bg-hazard-green/10 border border-hazard-green/30 italic">
-              <span class="text-label-sm text-hazard-green uppercase block mb-1">AI Output</span>
-              <p class="text-body-md">Yes — per CRA T2125, you can deduct a prorated portion of rent and utilities based on workspace percentage.</p>
-            </div>
-          </div>
-          <!-- Quick-ask chips -->
-          <div class="flex flex-wrap gap-2 mb-4">
-            <button onclick="quickAsk('GST threshold?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">GST threshold?</button>
-            <button onclick="quickAsk('RRSP deductions?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">RRSP deductions?</button>
-            <button onclick="quickAsk('Filing deadline?')" class="text-label-sm border border-outline-variant px-3 py-1 hover:border-hazard-green hover:text-hazard-green transition-colors text-on-surface-variant">Filing deadline?</button>
-          </div>
-        </div>
-        <div class="relative">
-          <input id="chat-input"
-            class="w-full bg-black border-2 border-outline-variant p-4 pr-12 text-hazard-green placeholder:text-outline focus:border-hazard-green outline-none font-mono text-sm"
-            placeholder="QUERY SYSTEM..." type="text" maxlength="200"
-            onkeydown="if(event.key==='Enter')sendChat()">
-          <button onclick="sendChat()" class="absolute right-4 top-1/2 -translate-y-1/2 text-hazard-green hover:scale-125 transition-transform">
-            <span class="material-symbols-outlined">send</span>
-          </button>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-2 text-center uppercase font-mono">Simulated AI · Not legal advice</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Feature Grid ──────────────────── -->
-  <section class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/30 border border-outline-variant/30">
-      <div class="bg-surface p-12 hover:bg-hazard-green/5 transition-colors group reveal">
-        <span class="text-label-md text-hazard-green font-mono mb-4 block">MODULE_01</span>
-        <h2 class="font-headline-lg text-headline-lg uppercase mb-6 group-hover:translate-x-4 transition-transform duration-300">Real-time <br>CRA Sync</h2>
-        <p class="text-on-surface-variant font-body-lg">Direct integration with My Account for instant updates on your tax balance and assessment history.</p>
-      </div>
-      <div class="bg-surface p-12 hover:bg-hazard-green/5 transition-colors group reveal" style="transition-delay:.08s">
-        <span class="text-label-md text-hazard-green font-mono mb-4 block">MODULE_02</span>
-        <h2 class="font-headline-lg text-headline-lg uppercase mb-6 group-hover:translate-x-4 transition-transform duration-300">Audit <br>Shield AI</h2>
-        <p class="text-on-surface-variant font-body-lg">Predictive risk scoring that highlights transactions likely to trigger CRA reviews before you file.</p>
-      </div>
-      <div class="bg-surface p-12 hover:bg-hazard-green/5 transition-colors group reveal" style="transition-delay:.12s">
-        <span class="text-label-md text-hazard-green font-mono mb-4 block">MODULE_03</span>
-        <h2 class="font-headline-lg text-headline-lg uppercase mb-6 group-hover:translate-x-4 transition-transform duration-300">One-Click <br>Filing</h2>
-        <p class="text-on-surface-variant font-body-lg">Certified NETFILE software that pushes your final data directly to the government with end-to-end encryption.</p>
-      </div>
-      <div class="bg-surface p-12 hover:bg-hazard-green/5 transition-colors group reveal" style="transition-delay:.16s">
-        <span class="text-label-md text-hazard-green font-mono mb-4 block">MODULE_04</span>
-        <h2 class="font-headline-lg text-headline-lg uppercase mb-6 group-hover:translate-x-4 transition-transform duration-300">Expense <br>Neural Net</h2>
-        <p class="text-on-surface-variant font-body-lg">Snap photos of receipts. Our AI categorizes them automatically under Canadian tax schedules.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Comparison ───────────────────── -->
-  <section class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-    <div class="glass-panel p-8 md:p-12 brutalist-border relative overflow-hidden reveal">
-      <h2 class="font-display-lg text-display-lg uppercase mb-12 text-center">
-        WHY <span class="text-hazard-green">TAXMATE?</span>
-      </h2>
-      <div class="flex justify-center items-center bg-midnight-navy p-4 md:p-6 rounded-sm">
-        <div class="w-full max-w-5xl overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr class="border-b border-outline-variant/30">
-                <th class="p-4 md:p-6 text-left"></th>
-                <th class="p-4 md:p-6 bg-primary text-on-primary border-x border-hazard-green shadow-[0_0_15px_rgba(34,197,94,0.3)] min-w-[160px]">
-                  <div class="flex items-center justify-center gap-2 uppercase tracking-widest font-black text-base">TaxMate <span class="text-leaf-red">🍁</span></div>
-                </th>
-                <th class="p-4 md:p-6 text-on-surface-variant font-medium min-w-[120px] text-base">Wave</th>
-                <th class="p-4 md:p-6 text-on-surface-variant font-medium min-w-[120px] text-base">QuickBooks</th>
-              </tr>
-            </thead>
-            <tbody class="text-body-md">
-              <tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">GST/HST $30K threshold tracking</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-3xl" style="color:#f59e0b">warning</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">Monthly tax estimator</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">Province-smart invoicing</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-3xl" style="color:#f59e0b">warning</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">AI tax Q&amp;A (CRA-based)</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/30 hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">Built for Canadian freelancers</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="material-symbols-outlined text-hazard-green text-3xl">check</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-                <td class="p-4 md:p-6 text-center"><span class="material-symbols-outlined text-error text-3xl">close</span></td>
-              </tr>
-              <tr class="hover:bg-white/5 transition-colors">
-                <td class="p-4 md:p-6 font-bold text-on-surface">Price</td>
-                <td class="p-4 md:p-6 bg-primary/40 text-center border-x border-hazard-green/20"><span class="text-xl font-black text-hazard-green">$9/mo</span></td>
-                <td class="p-4 md:p-6 text-center font-bold text-on-surface">Free*</td>
-                <td class="p-4 md:p-6 text-center font-bold text-on-surface">$15+/mo</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="mt-6 space-y-2 text-label-sm text-on-surface-variant font-mono uppercase">
-            <p>*Wave's free plan does not include GST tracking, monthly tax estimates, or AI assistance.</p>
-            <p>⚠ = Limited support. Wave supports basic GST invoicing but lacks threshold tracking, monthly estimates, and Canadian-specific AI guidance.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Testimonials ──────────────────── -->
-  <section class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-    <h2 class="font-display-lg text-display-lg uppercase mb-12 reveal">
-      HEAR FROM THE <span class="text-hazard-green">COMMUNITY</span>
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-      <div class="glass-panel p-8 brutalist-border relative group reveal">
-        <span class="material-symbols-outlined text-hazard-green mb-4 block text-4xl">format_quote</span>
-        <p class="font-body-lg text-on-surface mb-8">"This is incredibly helpful... thank you so much."</p>
-        <div class="flex items-center gap-4">
-          <div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">VU</div>
-          <div>
-            <span class="block font-label-md text-hazard-green uppercase tracking-wider">Verified User</span>
-            <span class="block text-label-sm text-on-surface-variant uppercase">Freelancer</span>
-          </div>
-        </div>
-      </div>
-      <div class="glass-panel p-8 brutalist-border relative group reveal" style="transition-delay:.08s">
-        <span class="material-symbols-outlined text-hazard-green mb-4 block text-4xl">format_quote</span>
-        <p class="font-body-lg text-on-surface mb-8">"The automation for corporate bookkeeping and investment income is a massive gap that needs to be filled. Looking forward to the beta version!"</p>
-        <div class="flex items-center gap-4">
-          <div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">TP</div>
-          <div>
-            <span class="block font-label-md text-hazard-green uppercase tracking-wider">Tax Professional</span>
-            <span class="block text-label-sm text-on-surface-variant uppercase">Corporate Specialist</span>
-          </div>
-        </div>
-      </div>
-      <div class="glass-panel p-8 brutalist-border relative group reveal" style="transition-delay:.12s">
-        <span class="material-symbols-outlined text-hazard-green mb-4 block text-4xl">format_quote</span>
-        <p class="font-body-lg text-on-surface mb-8">"Is this available for those earning less than $30k? Yes, and it's even more useful as you approach that threshold for tracking GST/HST."</p>
-        <div class="flex items-center gap-4">
-          <div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">FL</div>
-          <div>
-            <span class="block font-label-md text-hazard-green uppercase tracking-wider">Freelancer</span>
-            <span class="block text-label-sm text-on-surface-variant uppercase">Solo Entrepreneur</span>
-          </div>
-        </div>
-      </div>
-      <div class="glass-panel p-8 brutalist-border relative group reveal" style="transition-delay:.16s">
-        <span class="material-symbols-outlined text-hazard-green mb-4 block text-4xl">format_quote</span>
-        <p class="font-body-lg text-on-surface mb-8">"As an accountant in London, Ontario, I'm really looking forward to the real-world feedback and implementation of this platform."</p>
-        <div class="flex items-center gap-4">
-          <div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">AC</div>
-          <div>
-            <span class="block font-label-md text-hazard-green uppercase tracking-wider">Tax Professional</span>
-            <span class="block text-label-sm text-on-surface-variant uppercase">Public Accountant</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Visual Break / Terminal ─────── -->
-  <section class="mb-32 reveal">
-    <div class="w-full relative bg-black overflow-hidden border-y border-hazard-green/20 py-16 px-5 md:px-margin-desktop">
-      <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <!-- Terminal -->
-        <div>
-          <span class="text-label-md text-hazard-green uppercase tracking-widest block mb-4 font-mono">// TERMINAL OUTPUT</span>
-          <div class="font-mono text-sm leading-relaxed space-y-1" id="terminal-out">
-            <!-- injected by JS -->
-          </div>
-        </div>
-        <!-- Stats + CTA -->
-        <div class="space-y-6">
-          <h2 class="font-headline-lg text-headline-lg uppercase">START SAVING <span class="text-hazard-green">TODAY</span></h2>
-          <p class="text-on-surface-variant text-body-lg">Most Canadian freelancers overpay by $1,200–$3,800 per year. TaxMate catches what you miss.</p>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-5 border border-hazard-green/30 bg-hazard-green/5">
-              <span class="block text-4xl font-black text-hazard-green">$2.4K</span>
-              <span class="text-label-sm text-on-surface-variant uppercase">Avg. Annual Savings</span>
-            </div>
-            <div class="p-5 border border-hazard-green/30 bg-hazard-green/5">
-              <span class="block text-4xl font-black text-hazard-green">94%</span>
-              <span class="text-label-sm text-on-surface-variant uppercase">Accuracy Rate</span>
-            </div>
-          </div>
-          <button onclick="openModal('founder')"
-            class="w-full py-4 bg-hazard-green text-surface font-black uppercase tracking-tighter hover:brightness-110 transition-all shadow-[6px_6px_0_#fff] text-lg">
-            Get Started — $9/mo →
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section class="mb-32"><div class="w-full h-96 relative bg-black overflow-hidden"></div></section>
 </main>
 
-<!-- ══════════════════════════════════════════
-     PRICING
-══════════════════════════════════════════ -->
-<section id="pricing" class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-  <h2 class="font-display-lg text-display-lg uppercase mb-12 text-center reveal">
-    PRICING <span class="text-hazard-green">STRUCTURE</span>
-  </h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-
-    <!-- FREE -->
-    <div class="glass-panel p-8 brutalist-border flex flex-col reveal">
-      <div class="mb-8">
-        <span class="text-label-md text-on-surface-variant uppercase tracking-widest">FREE</span>
-        <div class="flex items-baseline gap-1 mt-2">
-          <span class="text-4xl font-black">$0</span>
-          <span class="text-on-surface-variant font-mono">/mo</span>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-2 uppercase">Forever free</p>
-      </div>
-      <ul class="flex-grow space-y-4 mb-10">
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST/HST calculator</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> 3 invoices / mo</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Province tax rates</li>
-        <li class="flex items-center gap-3 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Assistant (5 queries)</li>
-      </ul>
-      <button onclick="openModal('free')"
-        class="w-full py-4 border-2 border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors font-bold uppercase tracking-tighter">
-        Get Started Free
-      </button>
-    </div>
-
-    <!-- FOUNDER -->
-    <div class="glass-panel p-8 brutalist-border relative flex flex-col border-hazard-green ring-2 ring-hazard-green/20 shadow-[0_0_20px_rgba(34,197,94,0.3)] scale-105 z-10 reveal" style="transition-delay:.05s">
-      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-hazard-green text-surface px-4 py-1 font-bold text-xs uppercase tracking-widest whitespace-nowrap">🔥 EARLY BIRD</div>
-      <div class="mb-8">
-        <span class="text-label-md text-hazard-green uppercase tracking-widest">FOUNDER</span>
-        <div class="flex items-baseline gap-1 mt-2">
-          <span class="text-4xl font-black">$9</span>
-          <span class="text-on-surface-variant font-mono">/mo</span>
-        </div>
-        <p class="text-label-sm text-hazard-green mt-2 font-bold">Price locked forever 🔒</p>
-      </div>
-      <ul class="flex-grow space-y-4 mb-10">
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Free</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Unlimited invoices</li>
-        <li class="flex items-center gap-3 text-body-md font-bold"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Tax Assistant</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST Radar alerts</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Monthly tax estimator</li>
-      </ul>
-      <button onclick="openModal('founder')"
-        class="w-full py-4 bg-hazard-green text-surface hover:brightness-110 transition-all font-black uppercase tracking-tighter shadow-[4px_4px_0_#fff]">
-        Claim Founder Spot →
-      </button>
-    </div>
-
-    <!-- PRO -->
-    <div class="glass-panel p-8 brutalist-border flex flex-col reveal" style="transition-delay:.1s">
-      <div class="mb-8">
-        <span class="text-label-md text-on-surface-variant uppercase tracking-widest">PRO</span>
-        <div class="flex items-baseline gap-1 mt-2">
-          <span class="text-4xl font-black">$19</span>
-          <span class="text-on-surface-variant font-mono">/mo</span>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-2 uppercase">Launch Price</p>
-      </div>
-      <ul class="flex-grow space-y-4 mb-10">
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Founder</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Tax Q&amp;A (Unlimited)</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST Radar + Alerts</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Monthly tax estimator</li>
-      </ul>
-      <button onclick="openModal('waitlist')"
-        class="w-full py-4 border-2 border-outline-variant hover:border-hazard-green hover:text-hazard-green transition-colors font-bold uppercase tracking-tighter">
-        Join Waitlist
-      </button>
-    </div>
-
-    <!-- BUSINESS -->
-    <div class="glass-panel p-8 brutalist-border flex flex-col opacity-75 relative reveal" style="transition-delay:.15s">
-      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-surface-variant text-on-surface-variant px-4 py-1 font-bold text-xs uppercase tracking-widest whitespace-nowrap">V2.0 COMING</div>
-      <div class="mb-8">
-        <span class="text-label-md text-on-surface-variant uppercase tracking-widest">BUSINESS</span>
-        <div class="flex items-baseline gap-1 mt-2">
-          <span class="text-4xl font-black">$39</span>
-          <span class="text-on-surface-variant font-mono">/mo</span>
-        </div>
-        <p class="text-label-sm text-on-surface-variant mt-2 uppercase">Enterprise Scale</p>
-      </div>
-      <ul class="flex-grow space-y-4 mb-10">
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Pro</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Corp (CCPC) Support</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Capital gain/loss</li>
-        <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Dividend payment tools</li>
-        <li class="flex items-center gap-3 text-body-md font-bold"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Priority AI (Unlimited)</li>
-      </ul>
-      <button disabled class="w-full py-4 bg-on-background/10 border-2 border-outline text-on-surface-variant cursor-not-allowed font-bold uppercase tracking-tighter">Coming Soon</button>
-    </div>
-  </div>
+<!-- Pricing -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="pricing">
+<h2 class="font-display-lg text-display-lg uppercase mb-12 text-center">PRICING <span class="text-hazard-green">STRUCTURE</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="glass-panel p-8 brutalist-border flex flex-col"><div class="mb-8"><span class="text-label-md text-on-surface-variant uppercase tracking-widest">FREE</span><div class="flex items-baseline gap-1 mt-2"><span class="font-display-lg text-4xl">$0</span><span class="text-on-surface-variant font-mono">/mo</span></div><p class="text-label-sm text-on-surface-variant mt-2 uppercase">Forever free</p></div><ul class="flex-grow space-y-4 mb-10"><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST/HST calculator</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> 3 invoices / mo</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Province tax rates</li><li class="flex items-center gap-3 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Assistant (5 queries)</li></ul><button onclick="openModal('free')" class="w-full py-4 border-2 border-outline-variant hover:bg-surface-variant transition-colors font-bold uppercase tracking-tighter">Get Started Free</button></div>
+<div class="glass-panel p-8 brutalist-border relative group border-hazard-green ring-2 ring-hazard-green/20 shadow-[0_0_20px_rgba(34,197,94,0.3)] flex flex-col scale-105 z-10"><div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-hazard-green text-surface px-4 py-1 font-bold text-xs uppercase tracking-widest">🔥 EARLY BIRD</div><div class="mb-8"><span class="text-label-md text-hazard-green uppercase tracking-widest">FOUNDER</span><div class="flex items-baseline gap-1 mt-2"><span class="font-display-lg text-4xl">$9</span><span class="text-on-surface-variant font-mono">/mo</span></div><p class="text-label-sm text-hazard-green mt-2 font-bold">Price locked forever 🔒</p></div><ul class="flex-grow space-y-4 mb-10"><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Free</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Unlimited invoices</li><li class="flex items-center gap-3 text-body-md font-bold"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Tax Assistant</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST Radar alerts</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Monthly tax estimator</li></ul><button onclick="openModal('founder')" class="w-full py-4 bg-hazard-green text-surface hover:brightness-110 transition-all font-black uppercase tracking-tighter shadow-[4px_4px_0px_#fff]">Claim Founder Spot →</button></div>
+<div class="glass-panel p-8 brutalist-border flex flex-col"><div class="mb-8"><span class="text-label-md text-on-surface-variant uppercase tracking-widest">PRO</span><div class="flex items-baseline gap-1 mt-2"><span class="font-display-lg text-4xl">$19</span><span class="text-on-surface-variant font-mono">/mo</span></div><p class="text-label-sm text-on-surface-variant mt-2 uppercase">Launch Price</p></div><ul class="flex-grow space-y-4 mb-10"><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Founder</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Tax Q&A (Unlimited)</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST Radar + Alerts</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Monthly tax estimator</li></ul><button onclick="openModal('waitlist')" class="w-full py-4 border-2 border-outline-variant hover:bg-surface-variant transition-colors font-bold uppercase tracking-tighter">Join Waitlist</button></div>
+<div class="glass-panel p-8 brutalist-border flex flex-col opacity-80 border-dashed relative"><div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-surface-variant text-on-surface-variant px-4 py-1 font-bold text-xs uppercase tracking-widest">V2.0 COMING</div><div class="mb-8"><span class="text-label-md text-on-surface-variant uppercase tracking-widest">BUSINESS</span><div class="flex items-baseline gap-1 mt-2"><span class="font-display-lg text-4xl">$39</span><span class="text-on-surface-variant font-mono">/mo</span></div><p class="text-label-sm text-on-surface-variant mt-2 uppercase">Enterprise Scale</p></div><ul class="flex-grow space-y-4 mb-10"><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Everything in Pro</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Corp (CCPC) Support</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Capital gain/loss</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Dividend payment tools</li><li class="flex items-center gap-3 text-body-md font-bold"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Priority AI (Unlimited)</li></ul><button disabled class="w-full py-4 bg-on-background/10 border-2 border-outline text-on-surface-variant cursor-not-allowed font-bold uppercase tracking-tighter">Coming Soon</button></div>
+</div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     FAQ
-══════════════════════════════════════════ -->
-<section id="faq" class="px-5 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-  <h2 class="font-display-lg text-display-lg uppercase mb-12 reveal">
-    COMMON <span class="text-hazard-green">QUESTIONS</span>
-  </h2>
-  <div class="space-y-4" id="faq-container">
-    <!-- injected by JS -->
-  </div>
+<!-- FAQ -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="faq">
+<h2 class="font-display-lg text-display-lg uppercase mb-12">COMMON <span class="text-hazard-green">QUESTIONS</span></h2>
+<div class="space-y-4">
+<div class="glass-panel brutalist-border group transition-all duration-300"><button class="w-full flex justify-between items-center p-8 text-left focus:outline-none" onclick="const p=this.nextElementSibling;const icon=this.querySelector('.faq-icon');p.classList.toggle('hidden');icon.textContent=p.classList.contains('hidden')?'expand_more':'expand_less';this.parentElement.classList.toggle('border-hazard-green');"><span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors">How automated is the filing process?</span><span class="material-symbols-outlined faq-icon text-hazard-green">expand_more</span></button><div class="hidden px-8 pb-8"><p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">TaxMate uses AI to categorize expenses and sync with the CRA, making filing a matter of one-click verification.</p></div></div>
+<div class="glass-panel brutalist-border group transition-all duration-300"><button class="w-full flex justify-between items-center p-8 text-left focus:outline-none" onclick="const p=this.nextElementSibling;const icon=this.querySelector('.faq-icon');p.classList.toggle('hidden');icon.textContent=p.classList.contains('hidden')?'expand_more':'expand_less';this.parentElement.classList.toggle('border-hazard-green');"><span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors">Is it officially integrated with the CRA?</span><span class="material-symbols-outlined faq-icon text-hazard-green">expand_more</span></button><div class="hidden px-8 pb-8"><p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">Yes, TaxMate uses certified NETFILE software to ensure your data is securely and accurately transmitted directly to the CRA.</p></div></div>
+<div class="glass-panel brutalist-border group transition-all duration-300"><button class="w-full flex justify-between items-center p-8 text-left focus:outline-none" onclick="const p=this.nextElementSibling;const icon=this.querySelector('.faq-icon');p.classList.toggle('hidden');icon.textContent=p.classList.contains('hidden')?'expand_more':'expand_less';this.parentElement.classList.toggle('border-hazard-green');"><span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors">Is my financial data secure?</span><span class="material-symbols-outlined faq-icon text-hazard-green">expand_more</span></button><div class="hidden px-8 pb-8"><p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">We use bank-grade end-to-end encryption and are fully compliant with Canadian data privacy regulations.</p></div></div>
+<div class="glass-panel brutalist-border group transition-all duration-300"><button class="w-full flex justify-between items-center p-8 text-left focus:outline-none" onclick="const p=this.nextElementSibling;const icon=this.querySelector('.faq-icon');p.classList.toggle('hidden');icon.textContent=p.classList.contains('hidden')?'expand_more':'expand_less';this.parentElement.classList.toggle('border-hazard-green');"><span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors">Does it support GST/HST tracking?</span><span class="material-symbols-outlined faq-icon text-hazard-green">expand_more</span></button><div class="hidden px-8 pb-8"><p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">Absolutely. We track your revenue against the $30k threshold and alert you when it's time to register and file.</p></div></div>
+</div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════ -->
 <footer class="bg-black py-20 border-t-8 border-hazard-green">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-5 md:px-margin-desktop max-w-container-max mx-auto">
-    <div class="md:col-span-2">
-      <p class="text-on-surface-variant max-w-md mb-8">
-        © 2026 TaxMate Canada. AI-driven precision for the Canadian freelancer. Built on the principles of transparency and computational excellence.
-      </p>
-      <button onclick="openModal('founder')"
-        class="bg-hazard-green text-surface px-6 py-3 font-bold uppercase tracking-tighter shadow-[4px_4px_0_#fff] hover:brightness-110 transition-all">
-        Join Early Access →
-      </button>
-    </div>
-    <div>
-      <h4 class="font-label-md text-label-md text-hazard-green uppercase mb-6">Security</h4>
-      <ul class="space-y-4">
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Terms of Service</a></li>
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Audit Guarantees</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-label-md text-label-md text-hazard-green uppercase mb-6">Support</h4>
-      <ul class="space-y-4">
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Contact Support</a></li>
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Tax Disclaimer</a></li>
-        <li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">API Docs</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<p class="text-on-surface-variant max-w-md mb-8">© 2026 TaxMate Canada. AI-driven precision for the Canadian freelancer. Built on the principles of transparency and computational excellence.</p>
+</div>
+<div><h4 class="font-label-md text-label-md text-hazard-green uppercase mb-6">Security</h4><ul class="space-y-4"><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a></li><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Terms of Service</a></li><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Audit Guarantees</a></li></ul></div>
+<div><h4 class="font-label-md text-label-md text-hazard-green uppercase mb-6">Support</h4><ul class="space-y-4"><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Contact Support</a></li><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Tax Disclaimer</a></li><li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">API Docs</a></li></ul></div>
+</div>
 </footer>
 
-<!-- ══════════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════════ -->
 <script>
-/* ─────────────────────────────────────────────
-   AI KNOWLEDGE BASE
-───────────────────────────────────────────── */
-/* ─────────────────────────────────────────────
-   CHAT — Claude AI
-───────────────────────────────────────────── */
-async function sendChat() {
-  const input = document.getElementById('chat-input');
-  const q = input.value.trim();
-  if (!q) return;
-  input.value = '';
-  appendChat('user', q);
-  const typing = appendTyping();
-
-  try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: q })
-    });
-    const data = await res.json();
-    typing.remove();
-    appendChat('ai', data.reply || data.error || 'Sorry, something went wrong.');
-  } catch {
-    typing.remove();
-    appendChat('ai', 'Connection error. Please try again.');
-  }
-}
-
-function quickAsk(q) {
-  document.getElementById('chat-input').value = q;
-  sendChat();
-}
-
-function appendChat(role, text) {
-  const el = document.createElement('div');
-  el.className = role === 'user'
-    ? 'p-4 bg-surface/50 border border-outline-variant/30'
-    : 'p-4 bg-hazard-green/10 border border-hazard-green/30 italic';
-  el.innerHTML = `<span class="text-label-sm text-hazard-green uppercase block mb-1">${role === 'user' ? 'User Inquiry' : 'AI Output'}</span><p class="text-body-md">${esc(text)}</p>`;
-  const box = document.getElementById('chat-messages');
-  box.appendChild(el);
-  box.scrollTop = box.scrollHeight;
-}
-
-function appendTyping() {
-  const el = document.createElement('div');
-  el.className = 'p-4 bg-hazard-green/10 border border-hazard-green/30';
-  el.innerHTML = '<span class="text-label-sm text-hazard-green font-mono text-sm">Thinking...</span>';
-  document.getElementById('chat-messages').appendChild(el);
-  document.getElementById('chat-messages').scrollTop = 9999;
-  return el;
-}
-
-function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-/* ─────────────────────────────────────────────
-   TAX ESTIMATOR (2024 Ontario)
-───────────────────────────────────────────── */
-function calcTax(y) {
-  // Federal
-  let fed = 0;
-  if      (y <= 55867)  fed = y * .15;
-  else if (y <= 111733) fed = 55867*.15 + (y-55867)*.205;
-  else if (y <= 154906) fed = 55867*.15 + (111733-55867)*.205 + (y-111733)*.26;
-  else                  fed = 55867*.15 + (111733-55867)*.205 + (154906-111733)*.26 + (y-154906)*.29;
-  fed = Math.max(0, fed - 2354); // BPA credit approx
-
-  // Ontario
-  let prov = 0;
-  if      (y <= 51446)  prov = y * .0505;
-  else if (y <= 102894) prov = 51446*.0505 + (y-51446)*.0915;
-  else                  prov = 51446*.0505 + (102894-51446)*.0915 + (y-102894)*.1116;
-  prov = Math.max(0, prov - 550);
-
-  return { fed: Math.round(fed), prov: Math.round(prov), total: Math.round(fed+prov) };
-}
-
-function setIncome(v) {
-  document.querySelectorAll('.income-btn').forEach(b => {
-    b.classList.toggle('active', +b.dataset.v === v);
-  });
-  const t = calcTax(v);
-  const m = { total: Math.round(t.total/12), fed: Math.round(t.fed/12), prov: Math.round(t.prov/12) };
-  document.getElementById('tax-total').textContent = '$' + m.total.toLocaleString();
-  document.getElementById('tax-fed').textContent   = '$' + m.fed.toLocaleString();
-  document.getElementById('tax-prov').textContent  = '$' + m.prov.toLocaleString();
-  const ratio = Math.min(t.total / v, 0.48);
-  const offset = Math.max(50, 553 - 553 * ratio * 2);
-  document.getElementById('donut').style.strokeDashoffset = offset;
-}
-
-/* ─────────────────────────────────────────────
-   GST RADAR
-───────────────────────────────────────────── */
-function updateGST(v) {
-  const pct = Math.min(100, (v / 30000) * 100);
-  const bar = document.getElementById('gst-bar');
-  bar.style.width = pct + '%';
-  document.getElementById('gst-amount').textContent = '$' + v.toLocaleString();
-
-  const ok    = document.getElementById('gst-ok');
-  const warn  = document.getElementById('gst-warn');
-  const alert = document.getElementById('gst-alert');
-
-  if (v >= 30000) {
-    bar.style.background = '#ef4444';
-    ok.classList.add('hidden'); warn.classList.add('hidden'); alert.classList.remove('hidden');
-  } else if (v >= 24000) {
-    bar.style.background = '#f59e0b';
-    ok.classList.add('hidden'); alert.classList.add('hidden'); warn.classList.remove('hidden');
-  } else {
-    bar.style.background = '#22c55e';
-    warn.classList.add('hidden'); alert.classList.add('hidden'); ok.classList.remove('hidden');
-  }
-}
-
-/* ─────────────────────────────────────────────
-   FAQ
-───────────────────────────────────────────── */
-const FAQS = [
-  { q: 'How automated is the filing process?',
-    a: 'TaxMate uses AI to categorize expenses and sync with the CRA, making filing a matter of one-click verification. Our certified NETFILE integration handles encrypted transmission.' },
-  { q: 'Is it officially integrated with the CRA?',
-    a: 'Yes, TaxMate uses certified NETFILE software to ensure your data is securely and accurately transmitted directly to the CRA. Confirmation numbers are returned instantly.' },
-  { q: 'Is my financial data secure?',
-    a: 'We use bank-grade AES-256 end-to-end encryption for all data in transit and at rest. We are fully compliant with PIPEDA and Canadian data privacy regulations. We never sell your data.' },
-  { q: 'Does it support GST/HST tracking?',
-    a: 'Absolutely. We track your revenue against the $30,000 threshold and alert you when it\'s time to register and file — province-specific rates are updated in real-time.' },
-  { q: 'Can I import from Wave or QuickBooks?',
-    a: 'Yes — TaxMate supports CSV import from Wave, QuickBooks, FreshBooks, and most major platforms. The AI auto-maps categories to the correct CRA schedules.' },
-  { q: 'Which provinces are supported?',
-    a: 'All 13 Canadian provinces and territories, with correct HST/GST/PST rates applied automatically based on your client\'s billing address.' },
-];
-
-function buildFAQ() {
-  const c = document.getElementById('faq-container');
-  FAQS.forEach(item => {
-    const d = document.createElement('div');
-    d.className = 'glass-panel brutalist-border group transition-all duration-300 reveal';
-    d.innerHTML = `
-      <button class="faq-btn w-full flex justify-between items-center p-8 text-left focus:outline-none">
-        <span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors pr-4">${item.q}</span>
-        <span class="material-symbols-outlined faq-icon text-hazard-green flex-shrink-0">expand_more</span>
-      </button>
-      <div class="faq-body hidden px-8 pb-8">
-        <p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">${item.a}</p>
-      </div>`;
-    c.appendChild(d);
-  });
-
-  c.addEventListener('click', e => {
-    const btn = e.target.closest('.faq-btn');
-    if (!btn) return;
-    const panel = btn.parentElement;
-    const body  = panel.querySelector('.faq-body');
-    const icon  = btn.querySelector('.faq-icon');
-    const wasOpen = !body.classList.contains('hidden');
-    // Close all
-    c.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
-    c.querySelectorAll('.faq-icon').forEach(i => { i.textContent = 'expand_more'; });
-    c.querySelectorAll('.glass-panel').forEach(p => p.classList.remove('border-hazard-green'));
-    // Toggle
-    if (!wasOpen) {
-      body.classList.remove('hidden');
-      icon.textContent = 'expand_less';
-      panel.classList.add('border-hazard-green');
-    }
-  });
-}
-
-/* ─────────────────────────────────────────────
-   MODAL
-───────────────────────────────────────────── */
+/* ── MODAL CONFIG ── */
 const MODAL_COPY = {
-  founder:  { badge:'EARLY BIRD — 153 SPOTS LEFT', title:'Claim Your Founder Spot', desc:'Lock in $9/mo forever. First 500 founders only. No credit card required to reserve your spot.', btn:'Claim My Spot →' },
-  free:     { badge:'FREE PLAN', title:'Get Started for Free', desc:'Start with TaxMate at no cost — no card needed. Upgrade anytime.', btn:'Create Free Account →' },
+  founder:  { badge:'EARLY BIRD — 153 SPOTS LEFT', title:'Claim Your Founder Spot', desc:'Lock in $9/mo forever. First 500 founders only. No credit card required.', btn:'Claim My Spot →' },
+  free:     { badge:'FREE PLAN', title:'Get Started for Free', desc:'Start with TaxMate at no cost — no card needed.', btn:'Create Free Account →' },
   waitlist: { badge:'PRO PLAN WAITLIST', title:'Join the Pro Waitlist', desc:'Pro launches soon. Get notified first and lock in a launch discount.', btn:'Join Waitlist →' },
 };
 
@@ -973,223 +291,97 @@ function openModal(type) {
   document.body.style.overflow = 'hidden';
   setTimeout(() => document.getElementById('f-name').focus(), 250);
 }
-
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('active');
   document.body.style.overflow = '';
 }
-
-document.getElementById('modal-overlay').addEventListener('click', e => {
-  if (e.target === document.getElementById('modal-overlay')) closeModal();
-});
+document.getElementById('modal-overlay').addEventListener('click', e => { if (e.target === document.getElementById('modal-overlay')) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-/* ─────────────────────────────────────────────
-   MAILCHIMP CONFIG
-───────────────────────────────────────────── */
-const MC = {
-  u:  '33ae714a2c786736bfb9e4654',
-  id: 'c9e1990248',
-  base: 'https://gmail.us12.list-manage.com/subscribe/post-json'
-};
-
-function submitModal(e) {
+async function submitModal(e) {
   e.preventDefault();
-
-  // 유효성 검사
   const name  = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
-  const role  = document.getElementById('f-role').value;
   let ok = true;
-  if (!name)                        { showErr('name');  ok = false; } else hideErr('name');
+  if (!name)                         { showErr('name');  ok = false; } else hideErr('name');
   if (!email || !email.includes('@')){ showErr('email'); ok = false; } else hideErr('email');
   if (!ok) return;
-
-  // 버튼 로딩 상태
   const btn = document.getElementById('modal-cta');
-  const btnText = document.getElementById('modal-btn-text');
   btn.disabled = true;
-  btnText.textContent = 'Submitting…';
-
-  // Mailchimp JSONP 구독 요청
-  subscribeMailchimp({ email, name, role }, (result, msg) => {
-    btn.disabled = false;
-    btnText.textContent = 'Claim My Spot →';
-
-    if (result === 'success') {
-      closeModal();
-      showToast('✓ You\'re on the list! Check your inbox.');
-      // 카운터 업데이트
-      const el = document.getElementById('spot-count');
-      const n  = parseInt(el.textContent);
-      if (!isNaN(n)) el.textContent = n + 1;
-    } else {
-      // 이미 구독된 경우도 성공 처리
-      if (msg && msg.toLowerCase().includes('already subscribed')) {
-        closeModal();
-        showToast('✓ Already subscribed — you\'re all set!');
-      } else {
-        const errEl = document.getElementById('err-email');
-        errEl.textContent = msg || 'Something went wrong. Please try again.';
-        errEl.classList.remove('hidden');
-      }
-    }
-  });
-}
-
-async function subscribeMailchimp({ email, name, role }, callback) {
+  document.getElementById('modal-btn-text').textContent = 'Processing…';
   const parts = name.trim().split(' ');
-  const fname = parts[0] || '';
-  const lname = parts.slice(1).join(' ') || '';
-
   try {
     const res = await fetch('/api/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, fname, lname, role }),
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, fname: parts[0]||'', lname: parts.slice(1).join(' ')||'', role: document.getElementById('f-role').value })
     });
     const data = await res.json();
+    btn.disabled = false;
+    document.getElementById('modal-btn-text').textContent = 'Claim My Spot →';
     if (res.ok) {
-      callback('success', data.alreadySubscribed ? 'already subscribed' : '');
+      closeModal();
+      showToast(data.alreadySubscribed ? '✓ Already subscribed — you\'re all set!' : '✓ You\'re on the list! Check your inbox.');
     } else {
-      callback('error', data.error || 'Something went wrong.');
+      const errEl = document.getElementById('err-email');
+      errEl.textContent = data.error || 'Something went wrong.';
+      errEl.classList.remove('hidden');
     }
   } catch {
-    callback('error', 'Network error. Please try again.');
+    btn.disabled = false;
+    document.getElementById('modal-btn-text').textContent = 'Claim My Spot →';
+    document.getElementById('err-email').textContent = 'Network error. Please try again.';
+    document.getElementById('err-email').classList.remove('hidden');
   }
 }
-
 function showErr(id) { document.getElementById('err-'+id).classList.remove('hidden'); }
 function hideErr(id) { document.getElementById('err-'+id).classList.add('hidden'); }
 
-/* ─────────────────────────────────────────────
-   TOAST
-───────────────────────────────────────────── */
+/* ── TOAST ── */
 function showToast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
+  t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 4500);
 }
 
-/* ─────────────────────────────────────────────
-   MOBILE MENU
-───────────────────────────────────────────── */
-function toggleMenu() {
-  const m = document.getElementById('mobile-menu');
-  const open = m.classList.toggle('open');
-  document.getElementById('ham-icon').textContent = open ? 'close' : 'menu';
+/* ── CLAUDE AI CHAT ── */
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+  appendChat('user', q);
+  const typing = appendTyping();
+  try {
+    const res = await fetch('/api/chat', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ message: q }) });
+    const data = await res.json();
+    typing.remove();
+    appendChat('ai', data.reply || data.error || 'Sorry, something went wrong.');
+  } catch {
+    typing.remove();
+    appendChat('ai', 'Connection error. Please try again.');
+  }
 }
-function closeMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-  document.getElementById('ham-icon').textContent = 'menu';
+function quickAsk(q) { document.getElementById('chat-input').value = q; sendChat(); }
+function appendChat(role, text) {
+  const el = document.createElement('div');
+  el.className = role === 'user' ? 'p-4 bg-surface/50 border border-outline-variant/30' : 'p-4 bg-hazard-green/10 border border-hazard-green/30 italic';
+  el.innerHTML = `<span class="text-label-sm text-hazard-green uppercase block mb-1">${role==='user'?'User Inquiry':'AI Output'}</span><p class="text-body-md">${text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>`;
+  const box = document.getElementById('chat-messages');
+  box.appendChild(el); box.scrollTop = box.scrollHeight;
 }
-
-/* ─────────────────────────────────────────────
-   NAV — scroll & active links
-───────────────────────────────────────────── */
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 20);
-  const ids = ['features','pricing','faq'];
-  let cur = '';
-  ids.forEach(id => {
-    const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top < 140) cur = id;
-  });
-  document.querySelectorAll('.nav-link').forEach(a => {
-    const match = a.dataset.section === cur;
-    a.classList.toggle('text-hazard-green', match);
-    a.classList.toggle('border-b-2', match);
-    a.classList.toggle('border-hazard-green', match);
-    a.classList.toggle('pb-1', match);
-    a.classList.toggle('text-on-surface-variant', !match);
-  });
-}, { passive:true });
-
-/* ─────────────────────────────────────────────
-   SCROLL REVEAL
-───────────────────────────────────────────── */
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.07 });
-
-/* ─────────────────────────────────────────────
-   GLASS PANEL HOVER
-───────────────────────────────────────────── */
-function initGlass() {
-  document.querySelectorAll('.glass-panel').forEach(p => {
-    p.addEventListener('mouseenter', () => {
-      p.style.transition = 'all .3s ease';
-      p.style.transform  = 'translateY(-4px) translateX(-4px)';
-      p.style.boxShadow  = '12px 12px 0 #22c55e';
-    });
-    p.addEventListener('mouseleave', () => {
-      p.style.transform  = 'translateY(0) translateX(0)';
-      p.style.boxShadow  = '8px 8px 0 #22c55e';
-    });
-  });
+function appendTyping() {
+  const el = document.createElement('div');
+  el.className = 'p-4 bg-hazard-green/10 border border-hazard-green/30';
+  el.innerHTML = '<span class="text-label-sm text-hazard-green font-mono text-sm">Thinking...</span>';
+  document.getElementById('chat-messages').appendChild(el);
+  document.getElementById('chat-messages').scrollTop = 9999;
+  return el;
 }
 
-/* ─────────────────────────────────────────────
-   TERMINAL TYPEWRITER
-───────────────────────────────────────────── */
-const TERMINAL_LINES = [
-  { text:'$ taxmate --scan-income 2024', color:'#94a3b8' },
-  { text:'▶ Analyzing income streams...', color:'#22c55e' },
-  { text:'▶ Loading provincial tax tables [ON]...', color:'#22c55e' },
-  { text:'▶ Calculating CPP contributions...', color:'#22c55e' },
-  { text:'▶ Checking GST/HST threshold...', color:'#22c55e' },
-  { text:'⚠  Approaching $30,000 limit: 62% reached', color:'#f59e0b' },
-  { text:'▶ Generating deduction report...', color:'#22c55e' },
-  { text:'✓ COMPLETE — Potential savings: $1,240/yr', color:'#f8fafc', bold:true },
-  { text:'$ ', color:'#94a3b8', cursor:true },
-];
-
-function buildTerminal() {
-  const out = document.getElementById('terminal-out');
-  TERMINAL_LINES.forEach((l, i) => {
-    const p = document.createElement('p');
-    p.style.opacity = '0';
-    p.style.transition = 'opacity .35s';
-    p.style.color = l.color;
-    if (l.bold) p.style.fontWeight = '700';
-    p.textContent = l.text;
-    if (l.cursor) p.innerHTML += '<span class="cursor"></span>';
-    out.appendChild(p);
-    setTimeout(() => { p.style.opacity = '1'; }, i * 320);
-  });
-}
-
-/* ─────────────────────────────────────────────
-   LIVE COUNTER FLICKER (hero status)
-───────────────────────────────────────────── */
-function startCounterFlicker() {
-  setInterval(() => {
-    const base = 14802;
-    const delta = Math.floor(Math.random() * 200) - 100;
-    document.getElementById('calc-counter').textContent = (base + delta).toLocaleString();
-  }, 2000);
-  setInterval(() => {
-    const base = 1247;
-    const d = Math.floor(Math.random() * 3);
-    document.getElementById('user-counter').textContent = (base + d).toLocaleString();
-  }, 5000);
-}
-
-/* ─────────────────────────────────────────────
-   INIT
-───────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  buildFAQ();
-  buildTerminal();
-  setIncome(60000);
-  startCounterFlicker();
-
-  // Observe reveal elements (including newly injected FAQ items)
-  setTimeout(() => {
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-    initGlass();
-  }, 50);
+/* ── GLASS HOVER ── */
+document.querySelectorAll('.glass-panel').forEach(panel => {
+  panel.addEventListener('mouseenter', () => { panel.style.transition='all 0.3s ease'; panel.style.transform='translateY(-4px) translateX(-4px)'; panel.style.boxShadow='12px 12px 0px #22c55e'; });
+  panel.addEventListener('mouseleave', () => { panel.style.transform='translateY(0) translateX(0)'; panel.style.boxShadow='8px 8px 0px #22c55e'; });
 });
 </script>
 </body>
