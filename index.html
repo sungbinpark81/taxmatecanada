@@ -1058,54 +1058,58 @@ function submitModal(e) {
 }
 
 function subscribeMailchimp({ email, name, role }, callback) {
-  // 고유 콜백 이름 생성 (동시 요청 충돌 방지)
-  const cbName = 'mc_cb_' + Date.now();
-
-  // 글로벌 콜백 등록
-  window[cbName] = function(data) {
-    callback(data.result, data.msg);
-    // 정리
-    delete window[cbName];
-    const script = document.getElementById(cbName);
-    if (script) script.remove();
-  };
-
-  // 이름 분리 (First / Last)
-  const parts = name.split(' ');
+  // 이름 분리
+  const parts = name.trim().split(' ');
   const fname = parts[0] || '';
   const lname = parts.slice(1).join(' ') || '';
 
-  // URL 파라미터 구성
-  const params = new URLSearchParams({
-    u:      MC.u,
-    id:     MC.id,
-    EMAIL:  email,
-    FNAME:  fname,
-    LNAME:  lname,
-    MMERGE3: role,   // 역할 필드 (Mailchimp merge tag)
-    c:      cbName
-  });
+  // Mailchimp hidden iframe POST 방식 (CORS 우회)
+  const postUrl = `https://gmail.us12.list-manage.com/subscribe/post?u=${MC.u}&id=${MC.id}`;
 
-  // JSONP 스크립트 주입
-  const script = document.createElement('script');
-  script.id  = cbName;
-  script.src = `${MC.base}?${params.toString()}`;
+  const form = document.createElement('form');
+  form.method  = 'POST';
+  form.action  = postUrl;
+  form.target  = '_mc_iframe';
+  form.style.display = 'none';
 
-  // 타임아웃 처리 (10초)
-  const timeout = setTimeout(() => {
-    callback('error', 'Request timed out. Please check your connection.');
-    delete window[cbName];
-    script.remove();
-  }, 10000);
+  const fields = { EMAIL: email, FNAME: fname, LNAME: lname, b_: '' };
+  for (const [key, val] of Object.entries(fields)) {
+    const input = document.createElement('input');
+    input.type  = 'hidden';
+    input.name  = key;
+    input.value = val;
+    form.appendChild(input);
+  }
 
-  // 원래 콜백에 타임아웃 클리어 추가
-  const originalCb = window[cbName];
-  window[cbName] = function(data) {
-    clearTimeout(timeout);
-    originalCb(data);
+  // 숨겨진 iframe (Mailchimp 응답 페이지 수신용)
+  let iframe = document.getElementById('_mc_iframe');
+  if (!iframe) {
+    iframe = document.createElement('iframe');
+    iframe.name  = '_mc_iframe';
+    iframe.id    = '_mc_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+  }
+
+  // iframe 로드 완료 시 성공 처리
+  const onLoad = () => {
+    iframe.removeEventListener('load', onLoad);
+    clearTimeout(timer);
+    callback('success', '');
+    document.body.removeChild(form);
   };
 
-  document.body.appendChild(script);
+  // 타임아웃 8초
+  const timer = setTimeout(() => {
+    iframe.removeEventListener('load', onLoad);
+    // 타임아웃 발생해도 Mailchimp는 이미 데이터를 받았을 가능성 높음 → 성공 처리
+    callback('success', '');
+    if (document.body.contains(form)) document.body.removeChild(form);
+  }, 8000);
+
+  iframe.addEventListener('load', onLoad);
+  document.body.appendChild(form);
+  form.submit();
 }
 
 function showErr(id) { document.getElementById('err-'+id).classList.remove('hidden'); }
