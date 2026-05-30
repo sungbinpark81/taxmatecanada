@@ -782,50 +782,30 @@
 /* ─────────────────────────────────────────────
    AI KNOWLEDGE BASE
 ───────────────────────────────────────────── */
-const KB = [
-  { keys:['gst','hst','threshold','30000','30k','register'],
-    ans:'You must register for GST/HST once your revenue exceeds $30,000 in any single calendar quarter OR in four consecutive quarters. After registering, you collect and remit at 5% (GST) or up to 15% (HST) depending on the province. TaxMate tracks this in real-time.' },
-  { keys:['rrsp','retirement','contribution'],
-    ans:'RRSP contributions are fully tax-deductible up to your available room — 18% of prior-year earned income, capped at $31,560 for 2024. Unused room carries forward indefinitely. TaxMate auto-calculates your room from linked T4s.' },
-  { keys:['deadline','filing','due','april','june','when'],
-    ans:'Self-employed individuals must FILE by June 15, but any taxes OWED must be paid by April 30 to avoid interest. TaxMate sends automated reminders 30, 14, and 7 days before each deadline.' },
-  { keys:['home office','workspace','deduct','rent','utilities','work from home'],
-    ans:'Yes — CRA Form T2125 lets you deduct home-office expenses proportional to the workspace percentage (office sq ft ÷ total home sq ft). Eligible costs include rent, heat, hydro, and internet. The space must be your principal place of business.' },
-  { keys:['vehicle','car','mileage','km','kilometer','drive'],
-    ans:'Vehicle expenses are deductible based on business-use percentage. Keep a mileage log (CRA requires it). Flat-rate option: $0.70/km for the first 5,000 km, $0.64/km after. TaxMate\'s receipt scanner auto-tags fuel expenses.' },
-  { keys:['cpp','pension','self-employed','contribution'],
-    ans:'Self-employed Canadians pay both the employer and employee CPP portions — up to 11.9% of net self-employment income in 2024 (on Schedule 8). Half is deductible as a business expense, helping offset tax owing.' },
-  { keys:['audit','cra review','risk','flag'],
-    ans:'TaxMate\'s Audit Shield AI scores every transaction for CRA review risk. Common red flags: home office over 50% of home, vehicle usage over 90% business, or large round-number deductions without receipts. Fix before you file.' },
-  { keys:['netfile','submit','file','t1','return'],
-    ans:'TaxMate is certified NETFILE software. One click transmits your encrypted T1 return directly to CRA. You receive a confirmation number within minutes; refunds via direct deposit arrive in 2–8 business days.' },
-  { keys:['invoice','invoicing','province','hst','gst'],
-    ans:'TaxMate\'s Province-smart invoicing auto-applies the correct tax rate by client address: 13% HST (Ontario), 15% HST (Nova Scotia), 5% GST (Alberta), etc. You can set Net 30 or custom payment terms per client.' },
-  { keys:['price','cost','plan','$9','founder','free','pro','business'],
-    ans:'TaxMate offers: Free (GST calc + 3 invoices), Founder at $9/mo locked forever (full AI + unlimited invoices), Pro at $19/mo (unlimited AI queries), and Business at $39/mo coming in V2.0.' },
-];
-
-function aiReply(q) {
-  const lower = q.toLowerCase();
-  for (const item of KB) {
-    if (item.keys.some(k => lower.includes(k))) return item.ans;
-  }
-  return 'Great question. The answer depends on your specific situation — CRA rules can vary by province, income source, and business type. TaxMate\'s full AI (Founder plan) can analyze your actual numbers once connected. For urgent matters, consult a CPA.';
-}
-
 /* ─────────────────────────────────────────────
-   CHAT
+   CHAT — Claude AI
 ───────────────────────────────────────────── */
-function sendChat() {
+async function sendChat() {
   const input = document.getElementById('chat-input');
   const q = input.value.trim();
   if (!q) return;
   input.value = '';
   appendChat('user', q);
   const typing = appendTyping();
-  let dots = 0;
-  const t = setInterval(() => { typing.querySelector('span').textContent = 'Thinking' + '.'.repeat(dots++ % 3 + 1); }, 400);
-  setTimeout(() => { clearInterval(t); typing.remove(); appendChat('ai', aiReply(q)); }, 900 + Math.random()*600);
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: q })
+    });
+    const data = await res.json();
+    typing.remove();
+    appendChat('ai', data.reply || data.error || 'Sorry, something went wrong.');
+  } catch {
+    typing.remove();
+    appendChat('ai', 'Connection error. Please try again.');
+  }
 }
 
 function quickAsk(q) {
