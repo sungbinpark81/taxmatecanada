@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
   if (!API_KEY) return res.status(500).json({ error: 'API key not configured' });
 
   const postData = JSON.stringify({
-    model: 'claude-3-5-haiku-20241022',
+    model: 'claude-3-haiku-20240307',
     max_tokens: 512,
     system: `You are TaxMate Canada's AI tax assistant. You help Canadian freelancers, self-employed individuals, and small business owners with Canadian tax questions.
 
@@ -50,13 +50,18 @@ Key rules:
       apiRes.on('end', () => {
         try {
           const parsed = JSON.parse(data);
-          if (apiRes.statusCode === 200 && parsed.content?.[0]?.text) {
-            res.status(200).json({ reply: parsed.content[0].text });
-          } else {
-            res.status(500).json({ error: parsed.error?.message || 'Claude API error' });
+          // 성공 응답
+          if (parsed.content && Array.isArray(parsed.content) && parsed.content[0]?.text) {
+            return res.status(200).json({ reply: parsed.content[0].text });
           }
-        } catch {
-          res.status(500).json({ error: 'Invalid response from Claude' });
+          // Anthropic 에러 응답
+          if (parsed.error) {
+            return res.status(500).json({ error: `API Error: ${parsed.error.type} — ${parsed.error.message}` });
+          }
+          // 예상치 못한 응답
+          return res.status(500).json({ error: 'Unexpected response: ' + JSON.stringify(parsed).slice(0, 100) });
+        } catch (parseErr) {
+          res.status(500).json({ error: 'Parse error: ' + data.slice(0, 100) });
         }
         resolve();
       });
