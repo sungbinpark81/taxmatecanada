@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
   if (!API_KEY) return res.status(500).json({ error: 'API key not configured' });
 
   const postData = JSON.stringify({
-    model: 'claude-haiku-4-5',
+    model: 'claude-3-5-haiku-20241022',
     max_tokens: 512,
     system: `You are TaxMate Canada's AI tax assistant. You help Canadian freelancers, self-employed individuals, and small business owners with Canadian tax questions.
 
