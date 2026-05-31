@@ -6,7 +6,8 @@
 <title>TaxMate Canada | Radical Stealth Terminal</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" as="style">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -24,7 +25,33 @@
         }
 </script>
 <style>
-  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; vertical-align: middle; }
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+    vertical-align: middle;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Mobile responsive fixes */
+  @media (max-width: 768px) {
+    .font-display-lg, [class*="text-display-lg"] { font-size: 36px !important; line-height: 1 !important; letter-spacing: -0.03em !important; }
+    .px-margin-desktop { padding-left: 16px !important; padding-right: 16px !important; }
+    .comparison-table { font-size: 12px !important; }
+    .comparison-table th, .comparison-table td { padding: 8px 6px !important; }
+    #modal-box { padding: 24px !important; }
+  }
+  @media (max-width: 480px) {
+    .font-display-lg, [class*="text-display-lg"] { font-size: 28px !important; }
+  }
   .glass-panel { background: rgba(15,23,42,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
   .hazard-glow { text-shadow: 0 0 10px rgba(34,197,94,0.5); }
   .brutalist-border { border: 4px solid #000; box-shadow: 8px 8px 0px #22c55e; }
@@ -94,7 +121,7 @@
 
 <!-- Navigation Shell -->
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 h-20">
-<div class="flex justify-between items-center px-margin-desktop h-full max-w-container-max mx-auto">
+<div class="flex justify-between items-center px-4 md:px-margin-desktop h-full max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <img alt="TaxMate Canada Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybAgvz0MJEi0V2vfpdlUkhIMu2oE-kwKDoa1jrLY5LQ9fmb8d3oafjDrpvMAWkJj7pyV-H4cWpWE3pIRrqKwH7pnGnabOgPook_T8Z9SjLLueGTeZhe9qsi-olzt7lz57jF4p40y15lvCpF1CnhazUW2opNzV11cVOMxLGW7gxMAgjyB6M1OWP60pn7ezqwjFXt2ws9he4aQbEmrWSgoMg9W6XYGapPPY2o6UMzVtBmWUXCWxNeWEn6u-CFZPPx9U-_IDRNXpHmwm">
 </div>
@@ -111,7 +138,7 @@
 
 <main class="pt-32 pb-24">
 <!-- Hero Section -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <h1 class="font-display-lg uppercase mb-8 leading-none text-7xl lg:text-8xl tracking-tightest" style="line-height: 0.95; letter-spacing: -0.05em;">THE&nbsp; TAX TOOL BUILT FOR <br><span class="text-hazard-green">CANADIAN FREELANCERS</span></h1>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
 <div class="md:col-span-7">
@@ -131,7 +158,7 @@
 </section>
 
 <!-- Bento Terminal Dashboard Display -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="features">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32" id="features">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Monthly Tax Card -->
 <div class="md:col-span-1 glass-panel p-8 border-r-4 border-b-4 border-black relative overflow-hidden group" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
@@ -188,7 +215,7 @@
 </section>
 
 <!-- Feature Grid -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="glass-panel p-8 brutalist-border relative group hover:bg-hazard-green/5 transition-all" style="box-shadow: 8px 8px 0px #22c55e;"><span class="material-symbols-outlined text-hazard-green text-4xl mb-6 block">precision_manufacturing</span><h2 class="font-headline-md text-headline-md uppercase mb-4">Professional <br>Precision</h2><p class="text-on-surface-variant font-body-md">Engineered for surgical accuracy. We handle complex Canadian tax logic with terminal-grade reliability to ensure your records are flawless.</p></div>
 <div class="glass-panel p-8 brutalist-border relative group hover:bg-hazard-green/5 transition-all" style="box-shadow: 8px 8px 0px #22c55e;"><span class="material-symbols-outlined text-hazard-green text-4xl mb-6 block">bolt</span><h2 class="font-headline-md text-headline-md uppercase mb-4">Freelancer <br>Velocity</h2><p class="text-on-surface-variant font-body-md">Built for those who move fast. Minimize administrative overhead and reclaim your time with a workflow designed for the modern independent professional.</p></div>
@@ -197,11 +224,11 @@
 </section>
 
 <!-- Comparison Section -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <div class="glass-panel p-12 brutalist-border relative overflow-hidden" style="transition: 0.3s; transform: translateY(0px) translateX(0px); box-shadow: rgb(34, 197, 94) 8px 8px 0px;">
 <h2 class="font-display-lg text-display-lg uppercase mb-12 text-center">WHY <span class="text-hazard-green">TAXMATE?</span></h2>
 <div class="flex justify-center items-center bg-midnight-navy p-6 rounded-sm"><div class="w-full max-w-5xl overflow-x-auto">
-<table class="w-full border-collapse font-headline-md">
+<table class="w-full border-collapse font-headline-md comparison-table">
 <thead><tr class="border-b border-outline-variant/30">
 <th class="p-6 text-left"></th>
 <th class="p-6 bg-primary text-on-primary border-x border-hazard-green shadow-[0_0_15px_rgba(34,197,94,0.3)] min-w-[200px]"><div class="flex items-center justify-center gap-2"><span class="uppercase tracking-widest">TaxMate</span><span class="text-leaf-red">🍁</span></div></th>
@@ -226,7 +253,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <h2 class="font-display-lg text-display-lg uppercase mb-12">HEAR FROM THE <span class="text-hazard-green">COMMUNITY</span></h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="glass-panel p-8 brutalist-border relative group"><span class="material-symbols-outlined text-hazard-green mb-4 block">format_quote</span><p class="font-body-lg text-on-surface mb-8">"This is incredibly helpful... thank you so much."</p><div class="flex items-center gap-4"><div class="w-10 h-10 bg-hazard-green/20 flex items-center justify-center font-mono font-bold text-hazard-green">VU</div><div><span class="block font-label-md text-hazard-green uppercase tracking-wider">Verified User</span><span class="block text-label-sm text-on-surface-variant uppercase">Freelancer</span></div></div></div>
@@ -240,7 +267,7 @@
 </main>
 
 <!-- Pricing -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="pricing">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32" id="pricing">
 <h2 class="font-display-lg text-display-lg uppercase mb-12 text-center">PRICING <span class="text-hazard-green">STRUCTURE</span></h2>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
 <div class="glass-panel p-8 brutalist-border flex flex-col"><div class="mb-8"><span class="text-label-md text-on-surface-variant uppercase tracking-widest">FREE</span><div class="flex items-baseline gap-1 mt-2"><span class="font-display-lg text-4xl">$0</span><span class="text-on-surface-variant font-mono">/mo</span></div><p class="text-label-sm text-on-surface-variant mt-2 uppercase">Forever free</p></div><ul class="flex-grow space-y-4 mb-10"><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> GST/HST calculator</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> 3 invoices / mo</li><li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> Province tax rates</li><li class="flex items-center gap-3 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-hazard-green text-lg">check</span> AI Assistant (5 queries)</li></ul><button onclick="openModal('free')" class="w-full py-4 border-2 border-outline-variant hover:bg-surface-variant transition-colors font-bold uppercase tracking-tighter">Get Started Free</button></div>
@@ -251,7 +278,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="px-margin-desktop max-w-container-max mx-auto mb-32" id="faq">
+<section class="px-4 md:px-margin-desktop max-w-container-max mx-auto mb-32" id="faq">
 <h2 class="font-display-lg text-display-lg uppercase mb-12">COMMON <span class="text-hazard-green">QUESTIONS</span></h2>
 <div class="space-y-4">
 <div class="glass-panel brutalist-border group transition-all duration-300"><button class="w-full flex justify-between items-center p-8 text-left focus:outline-none" onclick="const p=this.nextElementSibling;const icon=this.querySelector('.faq-icon');p.classList.toggle('hidden');icon.textContent=p.classList.contains('hidden')?'expand_more':'expand_less';this.parentElement.classList.toggle('border-hazard-green');"><span class="font-headline-md text-on-surface group-hover:text-hazard-green transition-colors">What happens after the early bird period?</span><span class="material-symbols-outlined faq-icon text-hazard-green">expand_more</span></button><div class="hidden px-8 pb-8"><p class="text-body-lg text-on-surface-variant border-t border-outline-variant/30 pt-4">Your founder pricing is locked in forever — even after we raise prices at public launch.</p></div></div>
@@ -263,7 +290,7 @@
 </section>
 
 <footer class="bg-black py-20 border-t-8 border-hazard-green">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-4 md:px-margin-desktop max-w-container-max mx-auto">
 <div class="md:col-span-2">
 <p class="text-on-surface-variant max-w-md mb-8">© 2026 TaxMate Canada. AI-driven precision for the Canadian freelancer. Built on the principles of transparency and computational excellence.</p>
 </div>
